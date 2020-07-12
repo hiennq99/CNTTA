@@ -1,0 +1,223 @@
+#VRML V2.0 utf8
+
+#VRML V2.0 utf8
+DEF	goc Group {
+	children [
+		Transform {
+			children [
+				DEF	san Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0.97 1 0.62
+						}
+					}
+					geometry Box {
+						size 5 0.05 8
+					}
+				}
+			]
+		}
+		Transform {
+			translation	3.9 0 1.5
+			scale 0.6 1 0.625
+			children [USE san ]
+		}
+	]
+}
+Transform {
+	translation	13.5 0 1.5
+	rotation 0 1 0 1.57
+	children [USE goc ]
+}
+Transform {
+	translation	1.5 0 -13.5
+	rotation 0 1 0 -1.57
+	children [USE goc ]
+}
+Transform {
+	translation	15 0 -12
+	rotation 0 1 0 3.14
+	children [USE goc ]
+}
+
+Transform {
+	translation	7.45 0 0.5
+	scale 0.85 1 0.375
+	children [USE san ]
+}
+Transform {
+	translation	14 0 -6
+	scale 0.85 1 0.375
+	rotation 0 1 0 1.57
+	children [USE san ]
+}
+Transform {
+	translation	7.5 0 -14.95
+	scale 0.85 1 0.26
+	children [USE san ]
+}
+Transform {
+	translation	0 0 -6
+	scale 0.85 1 0.625
+	rotation 0 1 0 1.57
+	children [USE san ]
+}
+
+#Lan can
+Transform {
+	scale 1 0.3 0.3
+	translation	7.45 0.55 -0.95
+	children [Inline {url "lan_can.wrl"}]
+}
+Transform {
+	rotation 0 1 0 1.57
+	scale 1 0.3 0.3
+	translation	12.55 0.55 -5.95
+	children [Inline {url "lan_can.wrl"}]
+}
+
+Transform {
+	scale 1 0.3 0.3
+	translation	7.45 0.55 -11.05
+	children [Inline {url "lan_can.wrl"}]
+}
+Transform {
+	rotation 0 1 0 1.57
+	scale 1 0.3 0.3
+	translation	2.45 0.55 -5.95
+	children [Inline {url "lan_can.wrl"}]
+}
+Transform {
+	rotation 0 1 0 1.57
+	scale 0.8 0.3 0.3
+	translation	7.65 0.55 -13
+	children [Inline {url "lan_can_ngan.wrl"}]
+}
+Transform {
+	rotation 0 1 0 1.57
+	scale 0.8 0.3 0.3
+	translation	5.4 0.55 -13
+	children [Inline {url "lan_can_ngan.wrl"}]
+}
+
+Transform {
+	translation	13.5 -0.05 0.5
+	children [Inline {url "den_tran.wrl"}]
+}
+DEF	den Group {
+	children [
+
+		Transform {
+			translation	10.5 -0.05 0.5
+			children [Inline {url "den_tran.wrl"}]
+		}
+		Transform {
+			translation	7.5 -0.05 0.5
+			children [Inline {url "den_tran.wrl"}]
+		}
+
+		Transform {
+			translation	4.5 -0.05 0.5
+			children [Inline {url "den_tran.wrl"}]
+		}
+		Transform {
+			translation	1.5 -0.05 0.5
+			children [Inline {url "den_tran.wrl"}]
+		}
+	]
+}
+
+Transform {
+
+	rotation 0 1 0 1.57
+	children [USE den ]
+}
+Transform {
+	translation	13.8 0 0
+	rotation 0 1 0 1.57
+	children [USE den ]
+}
+
+
+Transform {
+	translation	13.5 -0.05 -12.5
+	children [Inline {url "den_tran.wrl"}]
+}
+Transform {
+	translation	10.5 -0.05 -12.5
+	children [Inline {url "den_tran.wrl"}]
+}
+
+Transform {
+	translation	4.5 -0.05 -12.5
+	children [Inline {url "den_tran.wrl"}]
+}
+Transform {
+	translation	1.5 -0.05 -12.5
+	children [Inline {url "den_tran.wrl"}]
+}
+
+DEF	nhom_tuong Group {
+	children [
+		Transform {
+			translation	-1 -1.05 2.1
+			children [
+				DEF	tuong_1 Shape {
+					appearance Appearance {
+						texture	ImageTexture {
+							url	"..\image\tuong_go_1.jpg"
+						}
+					}
+					geometry Box {
+						size 3 2.1 0.05
+					}
+				}
+			]
+		}
+		Transform {
+			translation	3.9 -1.05 2.1
+			children [
+				USE	tuong_1
+			]
+		}
+		Transform {
+			scale 0.095 0.068 0.1
+			translation	1.45 -2.055 2.1
+			children [
+				Inline {
+					url	"cua_chinh_2_canh.wrl"
+				}
+			]
+		}
+	]
+}
+Transform {
+	translation	12.1 0 0
+	children [USE nhom_tuong]
+}
+
+Transform {
+	translation	13.42 0 0.21
+	rotation 0 1 0 1.57
+	scale 0.75 1 1 
+	children [USE nhom_tuong]
+}
+Transform {
+	translation	13.42 0 -10.5
+	rotation 0 1 0 1.57
+	children [USE nhom_tuong]
+}
+
+Transform {
+	translation	-3 0 -0.9
+	rotation 0 1 0 1.57
+	scale 1.2 1 1 
+	children [USE nhom_tuong]
+}
+
+Transform {
+	translation	-3 0 -9.5
+	rotation 0 1 0 1.57
+	scale 1.2 1 1 
+	children [USE nhom_tuong]
+}

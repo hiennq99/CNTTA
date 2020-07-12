@@ -1,0 +1,155 @@
+#VRML V2.0 utf8
+Sound {
+      source AudioClip {
+            url    "amthanh.wav"
+            loop   TRUE
+     }
+     minFront 1140.0 #vung nghe ro
+     minBack  1140.0
+     maxFront 1180.0	#vung khong nghe
+     maxBack  1180.0
+     location 0 0 0 #vi tri phat
+   }
+
+Background {
+    skyAngle	[ 0.075, 0.1, 0.2, 1.309, 1.5708 ]					   #  thiết lập
+    skyColor	[ 1 1 0, .9 .9 .5, .7 .7 .9, 0 0.4 1, 0 0.7 1, 1 1 1 ] #  bầu trời
+    groundAngle [ 0.75, 1.4, 1.5, 1.5708 ]								# thiết lập
+    groundColor [ .16 .5 0, .16 .5 0, .36 .7 .2, .46 .8 .3, .66 1 .5 ]	# nền
+}
+# anh sang chieu vao phia truoc
+DirectionalLight {
+	direction 0 0 1
+	intensity 0.65  #cường độ chiếu sáng
+	#ambientIntensity 0.1  #xác định bao nhiêu ánh sáng này góp phần vào việc chiếu sáng tổng thể cả thế giới
+	color 1 1 1	#màu sắc nguồn sáng
+}
+
+# anh sang chieu vao phia sau
+DirectionalLight {
+	direction 0 0 -1
+	intensity 0.3
+	color 1 1 1
+}
+
+#anh sang chieu tu phia tren vao ben phai
+DirectionalLight {
+	direction 1 0 0
+	intensity 0.3
+	color 1 1 1
+}
+
+#anh sang chieu tu phia tren vao ben trai
+DirectionalLight {
+	direction -1 0 0
+	intensity 0.7
+	color 1 1 1
+}
+
+# anh sang tu tren chieu xuong
+DirectionalLight {
+	direction 0 -1 0
+	intensity 0.5
+	color 1 1 1
+}
+
+#anh sang tu duoi chieu len
+DirectionalLight {
+	direction 0 1 0
+	intensity 0.5
+	color 1 1 1
+}
+Viewpoint {		 
+	position -50 100 100 #vị trí
+	orientation 1 0 0 -0.7	  #góc nhìn
+	description "Goc nhin xa"
+}
+Viewpoint {		 
+	position -50 100 0 #vị trí
+	orientation 1 0 0 -0.7	  #góc nhìn
+	description "Goc nhin gan"
+}
+Viewpoint {		 
+	position -40 10 0 #vị trí
+	orientation 1 0 0 -0.7	  #góc nhìn
+	description "Goc nhin thap"
+}
+#2 via he ở đường 2 chiều
+Transform {
+	translation	0 0 0
+	children [
+		Inline {url "viahe\viahe.wrl"}
+	]
+}
+Transform {
+	translation	-68 0 0
+	rotation 0 1 0 3.14
+	children [
+		Inline {url "viahe\viahe.wrl"}
+	]
+}
+#via hè bên trái
+Transform {
+	translation	-126 0 0
+	rotation 0 1 0 3.14
+	children [
+		Inline {url "viahe\viahe.wrl"}
+	]
+}
+#via hè bên trên
+Transform {
+	translation	-70 0 -132
+	rotation 0 1 0 1.57
+	children [
+		Inline {url "viahe\viahe.wrl"}
+	]
+}
+
+#đường 2 chiều
+Transform {
+	translation	-29 0 -2
+	rotation 0 1 0 1.57
+	children [
+		Inline {url "xeco\duong.wrl"}
+	]
+}
+Transform {
+	translation	-39 0 2
+	rotation 0 1 0 -1.57
+	children [
+		Inline {url "xeco\duong.wrl"}
+	]
+}
+#đường 1 chiều bên trái 
+Transform {
+	translation	-97 0 2
+	rotation 0 1 0 -1.57
+	children [
+		Inline {url "xeco\duong.wrl"}
+	]
+}
+
+#dai phan cach
+#Transform {
+#	translation	-34 0 80
+#	rotation 0 1 0 1.57
+#	children [
+#		Inline {url "daiphancach\phancach.wrl"}
+#	]
+#}
+Transform {
+	translation	-34 0 0
+	rotation 0 1 0 1.57
+	children [
+		Shape {
+			geometry Box {size 196 .1 2 }
+			appearance Appearance {
+				texture	ImageTexture {
+				url	"co.jpg"
+				}
+			}
+		}
+	]
+}
+
+

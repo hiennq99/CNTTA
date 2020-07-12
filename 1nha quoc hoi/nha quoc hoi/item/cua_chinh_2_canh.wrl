@@ -1,0 +1,321 @@
+#VRML V2.0 utf8
+
+#VRML V2.0 utf8
+
+# Produced by 3D Studio MAX VRML97 exporter, Version 9, Revision 1
+# Date: Fri May 20 03:32:36 2011
+Transform {
+  translation 9.75 0 0
+  children [	  
+      DEF tru0c5 Transform {
+        translation 0 15 0
+        children [
+          Shape {
+            appearance Appearance {
+            	texture	ImageTexture {
+					url	"..\image\mau_go.jpg"
+				}
+            }
+            geometry Box { size 0.5 30 0.5 }
+          }
+    ] }
+  ]
+}
+Transform {
+  translation -9.75 0 0
+  children [
+      USE tru0c5
+  ]
+}
+Transform {
+  translation 0 29.5 0
+  children [
+      Transform {
+        translation 0 0.25 0
+        children [
+          Shape {
+            appearance Appearance {
+              texture	ImageTexture {
+					url	"..\image\mau_go.jpg"
+				}
+            }
+            geometry Box { size 20 0.5 0.5 }
+          }
+    ] }
+  ]
+}
+ Transform {
+	children [
+DEF SENSOR1 CylinderSensor { 
+			enabled	FALSE
+			minAngle -1.57
+			maxAngle 1.57
+    							   }
+		DEF DoorSense ProximitySensor {
+		center 0  15  0
+		size 35 35 35
+	    }
+
+DEF cuatrai Transform {
+	translation	9.5 0 0
+	children [
+		Transform {
+			translation	-9.5 0 0
+			children [
+		
+		Transform {
+		  translation 9.2 0.1 0
+		  children [
+    		  DEF khungkinh1 Transform {
+        		translation 0 14.6 0
+        		children [
+        		  Shape {
+            		appearance Appearance {            		  
+					  texture	ImageTexture {
+							url	"..\image\mau_go_1.jpg"
+						}
+            		}
+            		geometry Box { size 0.3 29.2 0.3 }
+        		  }
+    		] }
+		  ]
+		}
+		Transform {
+		  translation 0.2 0.1 0
+		  children [
+    		  USE khungkinh1
+		  ]
+		}
+Transform {
+  translation 4.7 0.1 0
+  children [
+      DEF kinh Transform {
+        translation 0 14.6 0
+        children [
+          Shape {
+            appearance Appearance {
+				material Material {
+					transparency 0.5
+				}
+
+              texture	ImageTexture {
+					url	"..\image\hoa_van.jpg"
+				}
+            }
+            geometry Box { size 9.3 29.2 0.2 }
+          }
+    ] }
+	  ]
+		}
+
+	DEF Cylinder05 Transform {
+  translation 1.5 17.43 0.6
+  rotation 0.5774 -0.5774 0.5774 -2.094
+  scale 1 0.6 1
+  children [
+      DEF taycam Transform {
+        translation 0 1 0
+        children [
+          Shape {
+            appearance Appearance {
+              texture	ImageTexture {
+					url	"..\image\mau_go.jpg"
+				}
+            }
+            geometry Cylinder { radius 0.1 height 2 }
+          }
+    ] }
+  ]
+}
+DEF Cylinder06 Transform {
+  translation 1.5 16.93 0.5
+  rotation 0 -1 0 -1.571
+  children [
+      USE taycam
+  ]
+}
+DEF Cylinder07 Transform {
+  translation 1.5 18.43 0.6
+  rotation 0.5774 -0.5774 0.5774 -2.094
+  scale 1 0.6 1
+  children [
+      USE taycam
+  ]
+}
+		DEF Cylinder08 Transform {
+		  translation 1.5 16.93 -0.5
+		  rotation 0 -1 0 -1.571
+		  children [
+    		  USE taycam
+		
+  ]
+}
+		
+		Transform {
+		  translation 4.7 29 0
+		  children [
+    		  DEF khungkinh3 Transform {
+        		translation 0 0.15 0
+        		children [
+        		  Shape {
+            		appearance Appearance {
+            		  
+					  texture	ImageTexture {
+							url	"..\image\mau_go_1.jpg"
+						}
+            		}
+            		geometry Box { size 9.3 0.3 0.3 }
+        		  }
+    		] }
+		  ]
+		}
+		DEF Box13 Transform {
+		  translation 4.7 0.1 0
+		  children [
+    		  DEF khungkinh4 Transform {
+        		translation 0 0.5 0
+        		children [
+        		  Shape {
+            		appearance Appearance {
+            		  
+					  texture	ImageTexture {
+							url	"..\image\mau_go_1.jpg"
+						}
+            		}
+            		geometry Box { size 9.3 1 0.3 }
+        		  }
+    		] }
+		  ]
+		}
+		DEF Box14 Transform {
+		  translation 4.59 8.744 0
+		  rotation 0 0 1 -1.047
+		  children [
+    		  DEF khungkinh2 Transform {
+        		translation 0 0.15 0
+        		children [
+        		  Shape {
+            		appearance Appearance {
+
+					  texture	ImageTexture {
+							url	"..\image\mau_go_1.jpg"
+						}
+            		}
+            		geometry Box { size 18 0.3 0.3 }
+        		  }
+    		] }
+		  ]
+		}
+		DEF Box16 Transform {
+		  translation 4.59 21.36 0
+		  rotation 0 0 1 -1.047
+		  children [
+    		  USE khungkinh2
+		  ]
+		}
+	]
+}]}
+
+]
+ROUTE SENSOR1.rotation_changed TO cuatrai.rotation
+}
+
+
+Transform {
+	children [
+DEF SENSOR2 CylinderSensor { 
+			enabled	FALSE
+			minAngle -1.57
+			maxAngle 1.57
+    							   }
+DEF cuaphai Transform {
+	translation	-9.5 0 0
+	children [
+		Transform {
+			translation	9.5 0 0
+			children [
+		
+		DEF Box02 Transform {
+		  translation -4.7 0.1 0
+		  children [
+    		  USE kinh
+		  ]
+		}
+		DEF Cylinder09 Transform {
+		  translation -1.5 16.93 -0.5
+		  rotation 0 -1 0 -1.571
+		  children [
+    		  USE taycam
+		  ]
+		}
+		DEF Cylinder10 Transform {
+		  translation -1.5 16.93 0.5
+		  rotation 0 -1 0 -1.571
+		  children [
+    		  USE taycam
+		  ]
+		}
+		DEF Cylinder11 Transform {
+		  translation -1.5 17.43 0.6
+		  rotation 0.5774 -0.5774 0.5774 -2.094
+		  scale 1 0.6 1
+		  children [
+    		  USE taycam
+		  ]
+		}
+		DEF Cylinder12 Transform {
+		  translation -1.5 18.43 0.6
+		  rotation 0.5774 -0.5774 0.5774 -2.094
+		  scale 1 0.6 1
+		  children [
+    		  USE taycam
+		  ]
+		}
+		DEF Box07 Transform {
+		  translation -9.2 0.1 0
+		  children [
+    		  USE khungkinh1
+		  ]
+		}
+
+		DEF Box09 Transform {
+		  translation -0.2 0.1 0
+		  children [
+    		  USE khungkinh1
+		  ]
+		}
+		DEF Box10 Transform {
+		  translation -4.7 29 0
+		  children [
+    		  USE khungkinh3
+		  ]
+		}
+		DEF Box11 Transform {
+		  translation -4.7 0.1 0
+		  children [
+    		  USE khungkinh4
+		  ]
+		}
+		DEF Box15 Transform {
+		  translation -4.81 21.36 0
+		  rotation 0 0 1 -1.047
+		  children [
+    		  USE khungkinh2
+		  ]
+		}
+		DEF Box17 Transform {
+		  translation -4.81 8.744 0
+		  rotation 0 0 1 -1.047
+		  children [
+    		  USE khungkinh2
+		  ]
+		}
+	]
+}]}
+]
+ROUTE SENSOR2.rotation_changed TO cuaphai.rotation
+}
+
+ROUTE DoorSense.isActive TO	SENSOR1.enabled
+ROUTE DoorSense.isActive TO	SENSOR2.enabled
+

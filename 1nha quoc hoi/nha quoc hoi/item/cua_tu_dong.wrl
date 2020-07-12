@@ -1,0 +1,150 @@
+#VRML V2.0 utf8
+Transform {
+children [  
+DEF	cam_bien Collision{
+children Transform {
+		children [
+			DEF cua_trai Transform {
+				translation	-0.51 0 0
+				children [
+					DEF	cua Transform {
+						children [
+							Shape {
+								appearance  Appearance {
+									material Material {
+										transparency 0.8
+									}
+									texture	ImageTexture {
+										url	"..\image\hoa_van.jpg"
+									}
+								}
+								geometry Box {
+									size 1 2 0.01
+								}
+							}
+							Transform {
+								translation	0 0.03 0
+								children [
+								Shape {
+									appearance  Appearance {
+										material Material {
+											transparency 0.5
+											diffuseColor 1 1 1
+										}
+			
+									}			
+									geometry Box {
+										size 1 0.15 0.01
+									}
+								}
+							]
+							}
+							Shape {
+								appearance  Appearance {
+									material Material {
+										transparency 0.5
+										diffuseColor 0 0 0
+									}
+				
+								}			
+								geometry Box {
+									size 1 0.1 0.01
+								}
+								geometry Text {
+									string "QUOC HOI VIET NAM"
+									fontStyle FontStyle {
+										style "BOLD"
+										family ["Tahoma"]
+										size 0.1
+										justify	"MIDDLE"
+									}
+								}
+							}
+						]
+					}
+		
+				]
+			}
+			DEF cua_phai Transform {
+				translation	0.51 0 0
+				children [USE cua]
+			}
+			DEF hop_cam_bien ProximitySensor {
+				center 0  1  0
+				size 4 3 4
+	    	}
+			Sound {
+				source DEF am AudioClip {
+					loop FALSE
+					url	["..\audio\cua_tu_dong.wav"]
+					description	"am thanh huong dan tat bat den"
+				}
+				location 0 0 0
+				minBack	0
+				minFront 0
+				maxBack	5
+				maxFront 5
+			}
+		]
+	}
+}
+Transform {
+	translation	-1.53 0 0
+	children [USE cua]
+}
+Transform {
+	translation	1.53 0 0
+	children [USE cua]
+}
+
+DEF OpenClock TimeSensor {
+    cycleInterval 1
+    loop FALSE
+    startTime 0.0
+    stopTime 1
+}
+DEF CloseClock TimeSensor {
+    cycleInterval 1
+    loop FALSE
+    startTime 0.0
+    stopTime 1
+}
+
+# Animation paths for the left and right doors
+DEF LeftOpen PositionInterpolator {
+    key [ 0.0, 1.0 ]
+    keyValue [ -0.51 0.0 0.0, -1.53 0.0 0.0 ]
+}
+DEF LeftClose PositionInterpolator {
+    key [ 0.0, 1.0 ]
+    keyValue [ -1.53 0.0 0.0, -0.51 0.0 0.0 ]
+}
+DEF RightOpen PositionInterpolator {
+    key [ 0.0, 1.0 ]
+    keyValue [ 0.51 0.0 0.0, 1.53 0.0 0.0 ]
+}
+DEF RightClose PositionInterpolator {
+    key [ 0.0, 1.0 ]
+    keyValue [ 1.53 0.0 0.0, 0.51 0.0 0.0 ]
+}
+]
+
+
+ROUTE hop_cam_bien.enterTime      TO OpenClock.set_startTime
+ROUTE hop_cam_bien.exitTime       TO CloseClock.set_startTime
+ROUTE hop_cam_bien.enterTime      TO am.startTime
+ROUTE hop_cam_bien.exitTime       TO am.stopTime
+
+
+ROUTE OpenClock.fraction_changed  TO LeftOpen.set_fraction
+ROUTE OpenClock.fraction_changed  TO RightOpen.set_fraction
+ROUTE CloseClock.fraction_changed TO LeftClose.set_fraction
+ROUTE CloseClock.fraction_changed TO RightClose.set_fraction
+
+ROUTE LeftOpen.value_changed      TO cua_trai.set_translation
+ROUTE LeftClose.value_changed     TO cua_trai.set_translation
+ROUTE RightOpen.value_changed     TO cua_phai.set_translation
+ROUTE RightClose.value_changed    TO cua_phai.set_translation
+}
+
+

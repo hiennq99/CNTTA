@@ -1,0 +1,12 @@
+#VRML V2.0 utf8
+Shape {
+	appearance Appearance {
+		texture	ImageTexture {
+					url	"..\image\cot_dung.jpg"
+		}
+	}
+	geometry Box {
+		size 0.3 8 0.3
+	}
+}
+

@@ -1,0 +1,25 @@
+#VRML V2.0 utf8
+
+Transform {
+	children Collision {
+		children [
+			DEF	cam_bien ProximitySensor {
+				center 0  0  0
+				size 5 2 5
+	    	}
+			Sound {
+				source DEF chao_mung AudioClip {
+					loop FALSE
+					url	["..\audio\dien_hong.wav"]
+				}
+				location 0 0 0
+				minBack	0
+				minFront 0
+				maxBack	10
+				maxFront 10
+			}
+		]
+	}
+	ROUTE cam_bien.enterTime      TO chao_mung.startTime
+	ROUTE cam_bien.exitTime       TO chao_mung.stopTime
+}

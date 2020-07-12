@@ -1,0 +1,715 @@
+#VRML V2.0 utf8
+Background {
+    skyAngle	[ 0.075, 0.1, 0.2, 1.309, 1.5708 ]
+    skyColor	[ 1 1 0, .9 .9 .5, .7 .7 .9, 0 0.4 1, 0 0.7 1, 1 1 1 ]
+    groundAngle [ 0.75, 1.4, 1.5, 1.5708 ]
+    groundColor [ .16 .5 0, .16 .5 0, .36 .7 .2, .46 .8 .3, .66 1 .5 ]
+}
+DirectionalLight {
+	on TRUE
+	intensity 1
+	ambientIntensity 0.2
+	color 1 1 1
+	direction 0.5 0.84 0.21
+}
+
+NavigationInfo {
+	avatarSize [0 0.7 0.2]
+}
+Viewpoint {
+	position 0 -0.35 35
+}
+
+
+#Nen
+Transform {
+	translation	0 -1 0
+	children [
+
+		DEF nen Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 1 1 1
+				}
+			}
+			geometry Box {
+				size 30 0.7 30
+			}
+		}
+		Transform {
+			translation	 0 0.6 0
+			scale 0.69 0.71 0.69
+			children [USE nen ]
+		}
+		#am thanh chao mung
+		Transform {
+			translation	0 0 20
+			children [Inline {url "item\chao_mung.wrl"}]
+		}
+		#am thanh o trung tam
+		Transform {
+			translation	0 0 0
+			children [Inline {url "item\trung_tam.wrl"}]
+		}
+		#am thanh o dien hong
+		Transform {
+			translation	3 4 0
+			children [Inline {url "item\dien_hong.wrl"}]
+		}
+
+		Transform {
+			scale 9.38 1 1
+			translation	0 -0.05 13.65
+			children [Inline {url "item\bac_thang_cua.wrl"}]
+		}
+		Transform {
+			scale 9.38 1 1
+			rotation 0 1 0 3.14
+			translation	0 -0.05 -13.65
+			children [Inline {url "item\bac_thang_cua.wrl"}]
+		}
+		Transform {
+			scale 9.38 1 1
+			rotation 0 1 0 1.57
+			translation	13.65 -0.05 0
+			children [Inline {url "item\bac_thang_cua.wrl"}]
+		}
+		Transform {
+			scale 9.38 1 1
+			rotation 0 1 0 -1.57
+			translation	-13.65 -0.05 0
+			children [Inline {url "item\bac_thang_cua.wrl"}]
+		}
+
+		DEF cay_bui Transform {
+			translation	-13 0.3 0
+			scale 0.03 0.03 0.03
+			children [
+				Inline {
+					url	"3dmax\cay_bui_3dmax.wrl"
+				}
+			]
+		}
+
+		Transform {
+			translation	0 0 3
+			children [USE cay_bui ]
+		}
+		Transform {
+			translation	0 0 6
+			children [USE cay_bui ]
+		}
+		Transform {
+			translation	0 0 9
+			children [USE cay_bui ]
+		}
+		Transform {
+			translation	0 0 -3
+			children [USE cay_bui ]
+		}
+		Transform {
+			translation	0 0 -6
+			children [USE cay_bui ]
+		}
+		Transform {
+			translation	0 0 -9
+			children [USE cay_bui ]
+		}
+
+		#Bac cua
+		Transform {
+			translation	0 0.6 12
+			children [
+				Inline {
+					url	"item\bac_cua.wrl"
+				}
+			]
+		}
+		#Tuong phia truoc
+		Transform {
+			translation	0 0.9 10.1
+			children [
+				Inline {
+					url	"item\mat_tien.wrl"
+				}
+			]
+		}
+		#Mai hien truoc
+		Transform {
+			translation	0 2.9 10.5
+			children [
+				Inline {
+					url	"item\mai_hien.wrl"
+				}
+			]
+
+		}
+		#Bac cua ben phai
+		Transform {
+			translation	11.99 0.6 0
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					url	"item\bac_cua.wrl"
+				}
+			]
+		}
+		#Tuong phia ben phai
+		Transform {
+			translation	10.1 0.9 0
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					url	"item\mat_phai.wrl"
+				}
+			]
+		}
+		#Mai hien ben phai
+		Transform {
+			translation	10.5 2.95 0
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					url	"item\mai_hien.wrl"
+				}
+			]
+
+		}
+		#Tuong phia sau va ben trai
+		#Tuong phia sau
+		Transform {
+			translation	0 0.9 -10.1
+			children [
+				Inline {
+					url	"item\mat_trai_sau.wrl"
+				}
+			]
+		}
+		#Tuong phia ben trai
+		Transform {
+			translation	-10.1 0.9 0
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					url	"item\mat_trai_sau.wrl"
+				}
+			]
+		}
+		#Tuong kinh truoc hien
+		Transform {
+			translation	0 5.45 8.05
+			children [
+				Inline {
+					url	"item\tuong_kinh_truoc_hien.wrl"
+				}
+			]
+		}
+		#Tuong kinh truoc hien ben phai
+		Transform {
+			translation	8.05 5.45 0
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					url	"item\tuong_kinh_truoc_hien.wrl"
+				}
+			]
+		}
+		#Tuong ben phai hien truoc
+		Transform {
+			translation	2.1 2.8 9.1
+			children [
+				Inline {
+					url	"item\tuong_ben_phai_hien.wrl"
+				}
+			]
+		}
+		#Tuong ben trai hien truoc
+		Transform {
+			translation	-2.1 2.8 9.1
+			rotation 0 1 0 3.14
+			children [
+				Inline {
+					url	"item\tuong_ben_phai_hien.wrl"
+				}
+			]
+		}
+		#Tuong ben phai hien phai
+		Transform {
+			translation	9.1 2.8 -2.1
+			rotation  0 1 0 1.57
+			children [
+				Inline {
+					url	"item\tuong_ben_phai_hien.wrl"
+				}
+			]
+		}
+		#Tuong ben trai hien phai
+		Transform {
+			translation	9.1 2.8 2.1
+			rotation 0 1 0 -1.57
+			children [
+				Inline {
+					url	"item\tuong_ben_phai_hien.wrl"
+				}
+			]
+		}
+		#Cot vuong
+		Transform {
+			translation	5 4 5
+			children [
+				Inline {
+					 url	"item\cot_vuong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-5 4 5
+			children [
+				Inline {
+					 url	"item\cot_vuong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	5 4 -5
+			children [
+				Inline {
+					 url	"item\cot_vuong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-5 4 -5
+			children [
+				Inline {
+					 url	"item\cot_vuong.wrl"
+				}
+			]
+		}
+		#cot tron
+				Transform {
+			translation	2 1.65 2
+			children [
+				Inline {
+					 url	"item\cot_tron.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-2 1.65 2
+			children [
+				Inline {
+					 url	"item\cot_tron.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	2 1.65 -2
+			children [
+				Inline {
+					 url	"item\cot_tron.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-2 1.65 -2
+			children [
+				Inline {
+					 url	"item\cot_tron.wrl"
+				}
+			]
+		}
+		#Cot 4 goc
+		Transform {
+			translation	10.1 3.3 10.1
+			children [
+				Inline {
+					 url	"item\cot_goc.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-10.1 3.3 10.1
+			children [
+				Inline {
+					 url	"item\cot_goc.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-10.1 3.3 -10.1
+			children [
+				Inline {
+					 url	"item\cot_goc.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	10.1 3.3 -10.1
+			children [
+				Inline {
+					 url	"item\cot_goc.wrl"
+				}
+			]
+		}
+		#San tang 2
+		Transform {
+			translation	-7.5 2.9 6
+			children [
+				Inline {
+					 url	"item\san_tang_2.wrl"
+				}
+			]
+		}
+				#Tuong kinh phong
+		Transform {
+			translation	5.1 6.45 8
+			children [
+				Inline {
+					 url	"item\tuong_kinh_phong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-5.1 6.45 8
+			children [
+				Inline {
+					 url	"item\tuong_kinh_phong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-8 6.45 5.1
+			rotation 0 1 0 -1.57
+			children [
+				Inline {
+					 url	"item\tuong_kinh_phong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-8 6.45 0
+			scale 1.3 1 1
+			rotation 0 1 0 -1.57
+			children [
+				Inline {
+					 url	"item\tuong_kinh_phong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-8 6.45 -5.1
+			rotation 0 1 0 -1.57
+			children [
+				Inline {
+					 url	"item\tuong_kinh_phong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	5.1 6.45 -8
+			rotation 0 1 0 3.14
+			children [
+				Inline {
+					 url	"item\tuong_kinh_phong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-5.1 6.45 -8
+			rotation 0 1 0 3.14
+			children [
+				Inline {
+					 url	"item\tuong_kinh_phong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	0 6.45 -8
+			scale 1.3 1 1
+			rotation 0 1 0 3.14
+			children [
+				Inline {
+					 url	"item\tuong_kinh_phong.wrl"
+				}
+			]
+		}
+
+		Transform {
+			translation	8 6.45 5.1
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					 url	"item\tuong_kinh_phong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	8 6.45 -5.1
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					 url	"item\tuong_kinh_phong.wrl"
+				}
+			]
+		}
+		#Kinh goc
+		Transform {
+			translation	9.35 6.45 8.7
+			children [
+				Inline {
+					 url "item\kinh_goc.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-8.7 6.45 9.35
+			rotation 0 1 0 -1.57
+			children [
+				Inline {
+					 url "item\kinh_goc.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-9.35 6.45 -8.7
+			rotation 0 1 0 3.14
+			children [
+				Inline {
+					 url "item\kinh_goc.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	8.7 6.45 -9.35
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					 url "item\kinh_goc.wrl"
+				}
+			]
+		}
+		#San tang 3
+		Transform {
+			translation	-7.5 4.95 6
+			children [
+				Inline {
+					 url	"item\san_tang_3.wrl"
+				}
+			]
+		}
+		
+		#Tran luon song
+		Transform {
+			translation	2.67 8.02 9
+			children [
+				Inline {
+					 url	"item\tran_song_luon.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-2.67 8.02 9
+			children [
+				Inline {
+					 url	"item\tran_song_luon.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	9 8.02 2.67
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					 url	"item\tran_song_luon.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	9 8.02 -2.67
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					 url	"item\tran_song_luon.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-9 8.02 2.67
+			rotation 0 1 0 -1.57
+			children [
+				Inline {
+					 url	"item\tran_song_luon.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-9 8.02 -2.67
+			rotation 0 1 0 -1.57
+			children [
+				Inline {
+					 url	"item\tran_song_luon.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	2.67 8.02 -9
+			rotation 0 1 0 3.14
+			children [
+				Inline {
+					 url	"item\tran_song_luon.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-2.67 8.02 -9
+			rotation 0 1 0 3.14
+			children [
+				Inline {
+					 url	"item\tran_song_luon.wrl"
+				}
+			]
+		}
+		#Dam ngang
+		Transform {
+			translation	0 8.05 7.85 
+			children [
+				Inline {
+					 url	"item\dam_ngang.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	7.85 8.05 0
+		   rotation 0 1 0 1.57
+			children [
+				Inline {
+					 url	"item\dam_ngang.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-7.85 8.05 0
+		   rotation 0 1 0 -1.57
+			children [
+				Inline {
+					 url	"item\dam_ngang.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	0 8.05 -7.85 
+			children [
+				Inline {
+					 url	"item\dam_ngang.wrl"
+				}
+			]
+		}
+		 #Tran song luon o goc
+		Transform {
+			translation	7.5 8.02 9
+			children [
+			  Inline {
+					 url	"item\tran_song_luon_goc.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	9 8.02 -7.5
+			rotation 0 1 0 1.57
+			children [
+			  Inline {
+					 url	"item\tran_song_luon_goc.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-7.5 8.02 -9
+			rotation 0 1 0 3.14
+			children [
+			  Inline {
+					 url	"item\tran_song_luon_goc.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	-9 8.02 7.5
+			rotation 0 1 0 -1.57
+			children [
+			  Inline {
+					 url	"item\tran_song_luon_goc.wrl"
+				}
+			]
+		}
+		#Phong dien hong
+		Transform {
+			translation	0.18 2.9 0.28
+			rotation 0 1 0 -0.08
+			scale 0.08 0.07 0.08
+			children [
+			  Inline {
+					 url	"item\phong_dien_hong.wrl"
+				}
+			]
+		}
+		#Tran nha
+		Transform {
+			translation	0 8 6.5
+			children [
+			  Inline {
+					 url	"item\nap_nha.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	0 8.025 0
+			children [
+			  Inline {
+					 url	"item\nap_vong_tron.wrl"
+				}
+			]
+		}
+		#La co
+		Transform {
+			translation	0 11.5 0
+			scale 2 2 2
+			children [
+			  Inline {
+					 url	"item\la_co.wrl"
+				}
+			]
+		}
+
+		#cau thang 
+		Transform {
+			translation	1.05 1.8 -7.5
+			children [
+				Inline {
+					 url	"item\cau_thang.wrl"
+				}
+			]
+		}
+		# Cua tu dong
+		Transform {
+			translation	0 1.8 8
+			children [
+				Inline {
+					 url	"item\cua_tu_dong.wrl"
+				}
+			]
+		}
+		Transform {
+			translation	8 1.8 0
+			rotation 0 1 0 1.57
+			children [
+				Inline {
+					 url	"item\cua_tu_dong.wrl"
+				}
+			]
+		}
+		
+
+
+	]
+}
+

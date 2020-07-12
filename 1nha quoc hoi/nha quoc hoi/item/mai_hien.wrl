@@ -1,0 +1,81 @@
+#VRML V2.0 utf8
+Transform {
+	rotation 0 0 1 1.57
+	scale 0.05 1 1
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.46 0.39 0.22
+					transparency 0.2
+				}
+			}
+			geometry Cylinder {
+				radius 2.5
+				height 4
+			}
+		}
+	]
+}
+#Thanh ngan
+Transform {
+	translation	0 -0.15 0
+	children [
+		DEF thanhngang Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.5 0.5 0.5
+				}
+			}
+			geometry Box {
+				size 4 0.05 0.05
+			}
+		}
+	]
+}
+Transform {
+	translation	0 -0.15 0.5
+	children [
+		USE	thanhngang
+	]
+}
+Transform {
+	translation	0 -0.14 1
+	children [
+		USE	thanhngang
+	]
+}
+Transform {
+	translation	0 -0.12 1.5
+	children [
+		USE	thanhngang
+	]
+}
+Transform {
+	translation	0 -0.10 2
+	children [
+		USE	thanhngang
+	]
+}
+#Thanh doc
+Transform {
+	translation	0.7 -0.1 -0.23
+	children [
+		DEF thanhdoc Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0.89 0.9 0.77
+				}
+			}
+			geometry Box {
+				size 0.2 0.2 4.5
+			}
+		}
+	]
+}
+Transform {
+	translation	-0.7 -0.1 -0.23
+	children [
+		USE	thanhdoc
+	]
+}

@@ -1,0 +1,302 @@
+#VRML V2.0 utf8
+Transform {
+translation	0 0 0
+children [
+	Shape {
+		appearance Appearance {
+			texture	ImageTexture {
+			url	"imgs\viahe.jpg"
+			}
+	}
+		geometry Box {size 50 .006 196}
+	}
+]
+}
+DEF	nha3 Transform {
+	translation	25 0 0
+	children [
+#tang1
+Transform {
+	translation	0 9 0
+	scale .03 .03 .03
+	children [
+		Inline {url "nha.wrl"}
+		]
+}
+#tang2
+Transform {
+	translation	0 27 0
+	scale .03 .03 .03
+	children [
+		Inline {url "nha.wrl"}
+		]
+} 
+#tang3
+Transform {
+	translation	0 45 0
+	scale .03 .03 .03
+	children [
+		Inline {url "nha.wrl"}
+		]
+}
+]}
+Transform {
+translation	0 0 -30
+children [
+USE	nha3
+]
+}
+DEF	nha2 Transform {
+	translation	25 0 40
+	children [
+#tang1
+Transform {
+	translation	0 9 0
+	scale .03 .03 .03
+	children [
+		Inline {url "nha.wrl"}
+		]
+}
+#tang2
+Transform {
+	translation	0 27 0
+	scale .03 .03 .03
+	children [
+		Inline {url "nha.wrl"}
+		]
+} 
+]}
+DEF	nha1 Transform {
+	translation 25 0 80
+	children [
+	Transform {
+	translation	0 9 0
+	scale .03 .03 .03
+	children [
+		Inline {url "nha.wrl"}
+	]
+	
+	}]
+}
+Transform {
+translation	0 0 -140
+children [
+USE	nha1
+]
+}
+
+#den duong va cay
+DEF	dencay Transform {children [
+Transform {
+	scale 2 3 2
+translation	-25 6.5 -80
+children [
+	Inline {
+	url	"den.wrl"
+	}
+]
+}
+Transform {
+	scale .07 .1 .1
+	translation	-22 7 -70
+	children [
+		Inline {
+		url	"cay.wrl"
+		}
+	]
+}
+Transform {
+	scale 2 3 2
+translation	-25 6.5 -60
+children [
+	Inline {
+	url	"den.wrl"
+	}
+]
+}
+Transform {
+	scale .07 .1 .1
+	translation	-22 7 -50
+	children [
+		Inline {
+		url	"cay.wrl"
+		}
+	]
+}
+Transform {
+	scale 2 3 2
+translation	-25 6.5 -40
+children [
+	Inline {
+	url	"den.wrl"
+	}
+]
+}
+Transform {
+	scale .07 .1 .1
+	translation	-22 7 -30
+	children [
+		Inline {
+		url	"cay.wrl"
+		}
+	]
+}
+Transform {
+	scale 2 3 2
+translation	-25 6.5 -20
+children [
+	Inline {
+	url	"den.wrl"
+	}
+]
+}
+Transform {
+	scale .07 .1 .1
+	translation	-22 7 -10
+	children [
+		Inline {
+		url	"cay.wrl"
+		}
+	]
+}
+Transform {
+	scale 2 3 2
+translation	-25 6.5 0
+children [
+	Inline {
+	url	"den.wrl"
+	}
+]
+}
+Transform {
+	scale .07 .1 .1
+	translation	-22 7 10
+	children [
+		Inline {
+		url	"cay.wrl"
+		}
+	]
+}
+Transform {
+	scale 2 3 2
+translation	-25 6.5 20
+children [
+	Inline {
+	url	"den.wrl"
+	}
+]
+}
+Transform {
+	scale .07 .1 .1
+	translation	-22 7 30
+	children [
+		Inline {
+		url	"cay.wrl"
+		}
+	]
+}
+Transform {
+	scale 2 3 2
+translation	-25 6.5 40
+children [
+	Inline {
+	url	"den.wrl"
+	}
+]
+}
+Transform {
+	scale .07 .1 .1
+	translation	-22 7 50
+	children [
+		Inline {
+		url	"cay.wrl"
+		}
+	]
+}
+Transform {
+	scale 2 3 2
+translation	-25 6.5 60
+children [
+	Inline {
+	url	"den.wrl"
+	}
+]
+}
+Transform {
+	scale .07 .1 .1
+	translation	-22 7 70
+	children [
+		Inline {
+		url	"cay.wrl"
+		}
+	]
+}
+Transform {
+	scale 2 3 2
+translation	-25 6.5 80
+children [
+	Inline {
+	url	"den.wrl"
+	}
+]
+}
+]}#dong den - cay
+Transform {
+	rotation 0 1 0 3.14
+	translation	0 0 0
+	children [
+	USE	dencay
+	]
+}
+#người đi dọc
+Transform {
+	translation	-22 3.5 3
+	rotation 0 1 0 1.57
+	scale   1.5 1.5 1.5 
+	children [
+		Inline {url "nguoi\nguoi1.wrl"}
+		]
+}
+Transform {
+	translation	-24 3.5 10
+	rotation 0 1 0 1.57
+	scale   1.5 1.5 1.5
+	children [
+		Inline {url "nguoi\nguoi1.wrl"}
+		]
+}
+Transform {
+	translation	-20 3.5 15
+	rotation 0 1 0 1.57
+	scale   1.5 1.5 1.5 
+	children [
+		Inline {url "nguoi\nguoi1.wrl"}
+		]
+}
+Transform {
+	translation	-20 3.5 33
+	rotation 0 1 0 1.57
+	scale   1.5 1.5 1.5 
+	children [
+		Inline {url "nguoi\nguoi1.wrl"}
+		]
+}
+#người đi ngang
+Transform {
+	translation	18 3.5 95
+	scale   1.5 1.5 1.5 
+	children [
+		Inline {url "nguoi\nguoi2.wrl"}
+		]
+}
+Transform {
+	translation	20 3.5 97
+	scale   1.5 1.5 1.5 
+	children [
+		Inline {url "nguoi\nguoi2.wrl"}
+		]
+}
+
+
+
+ 
