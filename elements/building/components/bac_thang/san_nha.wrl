@@ -1,0 +1,14 @@
+#VRML V2.0 utf8
+
+# Sàn nhà
+
+Shape {
+	appearance Appearance	{
+		material Material {
+			diffuseColor 0.9 0.8 0.7
+		}
+	}
+	geometry Box {
+		size 14 1 2
+	}
+}

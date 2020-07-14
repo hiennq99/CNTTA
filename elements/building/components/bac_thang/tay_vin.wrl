@@ -1,0 +1,78 @@
+#VRML V2.0 utf8
+
+# Tay vịn 2 bên
+
+Group {
+	children [
+		# Cục ở dưới
+		Transform {
+			translation	0 0 2
+			children [
+				Shape {
+					appearance Appearance	{
+						material Material {
+							diffuseColor 0.9 0.8 0.7
+						}
+					}
+					geometry Box {
+						size 0.2 1 2
+					}
+				}
+			]
+		}
+		# Cục bên trên
+		Transform {
+			translation	0 0.75 1.2
+			children [
+				Shape {
+					appearance Appearance	{
+						material Material {
+							diffuseColor 0.9 0.8 0.7
+						}
+					}
+					geometry Box {
+						size 0.2 0.5 0.4
+					}
+				}
+			]
+		}
+		Transform {
+			translation	-0.1 0.5 1
+			children [
+				Shape {
+					appearance Appearance	{
+						material Material {
+							diffuseColor 0.9 0.8 0.7
+						}
+					}
+					geometry IndexedFaceSet	{
+						coord Coordinate {
+							point [
+								0 0 0,
+								0.2 0 0,
+								0.2 0 2,
+								0 0 2,
+								0.2 0.5 0,
+								0 0.5 0
+							]
+						}
+						coordIndex [
+							0 1 2 3 -1
+							0 1 4 5 -1
+							0 3 5 -1
+							1 2 4 -1
+							2 3 5 4
+						]
+						color Color	{
+							color [0.9 0.8 0.7]
+						}
+						colorIndex [0 0 0 0 0]
+						colorPerVertex FALSE
+						convex FALSE
+						solid FALSE
+					}
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,40 @@
+#VRML V2.0 utf8
+
+DEF	BAC_THANG Group {
+	children [
+		Inline {
+			url	"san_nha.wrl"
+		}	
+		Transform {
+			translation	0 0.4 1.2
+			children [
+				Inline { url "bac_cua.wrl" }
+			]
+		}
+		Transform {
+			translation	6.9 0 0
+			children [
+				Inline { url "tay_vin.wrl" }
+			]
+		}
+		Transform {
+			translation	-6.9 0 0
+			children [
+				Inline { url "tay_vin.wrl" }
+			]
+		}
+		Transform {
+			translation	7 -0.5 1
+			children [
+				Inline { url "doc_len.wrl" }
+			]
+		}
+		Transform {
+			translation	-7 -0.5 -1
+			rotation 0 1 0 3.1438
+			children [
+				Inline { url "doc_len.wrl" }
+			]
+		}
+	]
+}

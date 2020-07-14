@@ -670,7 +670,7 @@ Transform {
 			]
 		}
 		#La co
-		Transform {
+		DEF laco Transform {
 			translation	0 11.5 0
 			scale 2 2 2
 			children [
@@ -679,7 +679,18 @@ Transform {
 				}
 			]
 		}
-
+		DEF	Xoay_co Transform {
+			children [ USE laco
+				DEF	timer1 TimeSensor {
+					enabled	TRUE
+					cycleInterval 2
+					loop TRUE
+				}
+				DEF	OrienIn1 OrientationInterpolator {
+					key	[0 0.5 1]
+					keyValue [0 1 0 0, 0 1 0 3.14, 0 1 0 6.28]
+				}
+			]}
 		#cau thang 
 		Transform {
 			translation	1.05 1.8 -7.5
@@ -713,3 +724,5 @@ Transform {
 	]
 }
 
+ROUTE timer1.fraction_changed TO OrienIn1.set_fraction
+ROUTE OrienIn1.value_changed TO	Xoay_co.rotation
