@@ -27,7 +27,7 @@ Group {
 	children [
 		Inline { url "elements/building/index.wrl" }
 		Transform {
-			translation	0 -0.5 -12
+			translation	0 -0.5 -18
 			children Inline	{ url "elements/SugarDaddy/main.wrl" } 
 		}
 	]
