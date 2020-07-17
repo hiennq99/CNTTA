@@ -1,0 +1,140 @@
+#VRML V2.0 utf8
+
+# color 0.3 0.6 0.86
+# Lan can
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "_proto.wrl"
+# Bệ dưới
+Transform {
+	translation	0 -1.1 0.15
+	children [
+		Wall { size 4 0.3 0.6 color 1 1 1 }
+	]
+}
+
+Transform {
+	translation	0 -0.45 0.4
+	children Wall { size 3.9 0.05 0.05 color 0 0 0}
+}
+Transform {
+	translation	-1.9 -0.45 0.3
+	children Wall { size 0.05 0.05 0.3 color 0 0 0} 
+}
+
+Transform {
+	translation	1.9 -0.45 0.3
+	children Wall { size 0.05 0.05 0.3 color 0 0 0}
+}
+
+DEF RaoChanTruoc Group {
+	children [
+		DEF ThanhRao Transform {
+			translation	0 -0.7 0.4
+			children [
+				Wall { size 0.02 0.5 0.02 color 0 0 0 }
+			]
+		}
+		Transform {
+			translation	0.1 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	0.2 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	0.3 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	0.4 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	0.5 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	0.6 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	0.7 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	0.8 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	0.9 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	1 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	1.1 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	1.2 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	1.3 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	1.4 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	1.5 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	1.6 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	1.7 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	1.8 0 0
+			children USE ThanhRao
+		}
+	]
+}
+
+DEF	RaoChanHaiBen Group {
+	children [
+		Transform {
+			translation	1.9 0 0
+			children USE ThanhRao
+		}
+		Transform {
+			translation	1.9 0 -0.1
+			children USE ThanhRao
+		}
+		Transform {
+			translation	1.9 0 -0.2
+			children USE ThanhRao
+		}
+	]
+}
+
+Transform {
+	translation	-1.9 0 0
+	children [
+		USE	RaoChanTruoc
+	]
+}
+
+Transform {
+	translation	-3.8 0 0
+	children [
+		USE	RaoChanHaiBen
+	]
+}
