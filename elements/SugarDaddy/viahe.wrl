@@ -1,0 +1,38 @@
+#VRML V2.0 utf8
+
+DEF viaHe Transform {
+	translation	0 0 2
+	children [
+		Shape {
+			appearance Appearance {
+				texture	ImageTexture {
+					url	"imgs/viahe.jpg"
+				}
+			}
+			geometry Box {size 23 .003 2}
+		}
+	]
+}
+
+
+
+Transform {
+	translation	0 0 19
+	children [USE viaHe]
+}
+
+Transform {
+	translation	8.5 0 11.5
+	scale 0.745 1 1
+	rotation 0 1 0 1.57
+	children [USE viaHe ]
+}
+Transform {
+	scale 0.745 1 1
+	translation	-12.45 0 11.5
+	rotation 0 1 0 1.57
+	children [USE viaHe ]
+}
+Viewpoint {		
+	position 0 0 50
+}
