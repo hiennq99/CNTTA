@@ -1,9 +1,7 @@
 #VRML V2.0 utf8
 
-EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "components/tang_mot/_proto.wrl"
-
 Viewpoint {
-	position 0 0 40
+	position 0 10 40
 }
 
 DEF	TOA_NHA Group {
@@ -33,6 +31,9 @@ DEF	TOA_NHA Group {
 		Transform {
 			translation	5 15.5 -1
 			children Inline	{ url "components/tang_tren/_index.wrl" }
+		}
+		Transform {
+			children Inline	{ url "components/tang_thuong/_index.wrl" }
 		}
 	]	
 }
