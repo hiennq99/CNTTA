@@ -1,0 +1,61 @@
+#VRML V2.0 utf8
+
+# Mặt trước
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "_proto.wrl"
+
+Group {
+	children [
+		Transform {
+			translation	0 3 -0.15
+			children Wall { size 18 1 0.3 }
+		}
+		Transform {
+			translation	-8.75 1.5 -0.15
+			children DEF CotTuong Wall { size 0.5 3 0.3 }
+		}
+		Transform {
+			translation	8.75 1.5 -0.15
+			children USE CotTuong
+		}
+		Transform {
+			translation	1.25 1.5 -0.15
+			children USE CotTuong
+		}
+		Transform {
+			translation	-1.25 1.5 -0.15
+			children USE CotTuong
+		}
+		Transform {
+			translation	3.75 1.5 -0.15
+			children USE CotTuong
+		}
+		Transform {
+			translation	-3.75 1.5 -0.15
+			children USE CotTuong
+		}
+		Transform {
+			translation	6.25 1.5 -0.15
+			children USE CotTuong
+		}
+		Transform {
+			translation	-6.25 1.5 -0.15
+			children USE CotTuong
+		}
+		Transform {
+			translation	-2.5 0.5 -0.15
+			children DEF TuongNgang Wall { size 2 1 0.3 }
+		}
+		Transform {
+			translation	2.5 0.5 -0.15
+			children USE TuongNgang
+		}
+		Transform {
+			translation	-7.5 0.5 -0.15
+			children USE TuongNgang
+		}
+		Transform {
+			translation	7.5 0.5 -0.15
+			children USE TuongNgang
+		}
+	] 
+}

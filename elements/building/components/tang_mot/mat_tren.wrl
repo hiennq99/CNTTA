@@ -1,0 +1,14 @@
+#VRML V2.0 utf8
+
+# Mặt trần
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "_proto.wrl"
+
+Group {
+	children [
+		Wall { size 18.3 0.1 12.3 }
+		Transform {
+			translation	0 0.2 0
+			children Wall { size 18.1 0.1 12.1, color 1 1 1 }
+		}
+	]
+}
