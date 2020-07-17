@@ -30,5 +30,11 @@ Group {
 			translation	0 -0.5 -18
 			children Inline	{ url "elements/SugarDaddy/main.wrl" } 
 		}
+		Transform {	 
+			translation	0 1.65 15
+			children [Inline 
+				{url "elements/People/person1.wrl"}
+			]
+		}
 	]
 }
