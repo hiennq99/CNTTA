@@ -2,8 +2,10 @@
 
 DEF	TOA_NHA Group {
 	children [
-		Inline {
-			url	"components/bac_thang/_index.wrl"
+		Inline { url "components/bac_thang/_index.wrl" }
+		Transform {
+			translation	0 0.5 -1
+			children Inline	{ url "components/tang_mot/_index.wrl" }
 		}
 	]	
 }
