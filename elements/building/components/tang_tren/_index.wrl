@@ -1,46 +1,42 @@
 #VRML V2.0 utf8
 
-EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "_proto.wrl"
+# color 0.3 0.6 0.86
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "../../_proto.wrl"
+Viewpoint {
+	position 0 0 20
+}
+DEF Phong Group {
+	children [
+		Transform {
+			translation	0 0 -0.1
+			children [
+				Inline { url "mat_truoc.wrl" }
+				Inline { url "lan_can.wrl" }
+			]
+		}
+		Transform {
+			translation	0 0.1 -11.85
+			children Inline	{ url "mat_sau.wrl" }
+		}
+		Transform {
+			translation	-3.85 0.1 -5.95
+			children Inline	{ url "mat_ben.wrl" }
+		}
+		Transform {
+			translation	3.85 0.1 -5.95
+			children Inline	{ url "mat_ben.wrl" }
+		}
+		Transform {
+			translation	0 1.4 -6
+			children Inline	{ url "tran_nha.wrl" }
+		}
+	]
+}
+Transform {
+	translation	-10 0 0
+	children USE Phong
+}
+Transform {
+	children Inline	{ url "phong_giua.wrl" }
+}
 
-Transform {
-	translation	2.2 1.25 0
-	children [
-		Wall { size 0.5 2.5 0.3 }
-	]
-}
-Transform {
-	translation	-2.2 1.25 0
-	children [
-		Wall { size 0.5 2.5 0.3 }
-	]
-}
-Transform {
-	translation	3.75 1.25 0
-	children [
-		Wall { size 0.5 2.5 0.3 }
-	]
-}
-Transform {
-	translation	-3.75 1.25 0
-	children [
-		Wall { size 0.5 2.5 0.3 }
-	]
-}
-Transform {
-	translation	0 2.35 0
-	children [
-		Wall { size 8 0.3 0.3 }
-	]
-}
-Transform {
-	translation	3 0.4 0
-	children [
-		Wall { size 1.2 0.8 0.3 }
-	]
-}
-#Transform {
-#	translation	-3 0.4 0
-#	children [
-#		Wall { size 1.2 0.8 0.3 }
-#	]
-#}
