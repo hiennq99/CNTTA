@@ -1,7 +1,7 @@
 #VRML V2.0 utf8
 
 DEF viaHe Transform {
-	translation	0 0 2
+	translation	0 0 3
 	children [
 		Shape {
 			appearance Appearance {
@@ -9,27 +9,26 @@ DEF viaHe Transform {
 					url	"imgs/viahe.jpg"
 				}
 			}
-			geometry Box {size 23 .003 2}
+			geometry Box {size 27.5 .003 2}
 		}
 	]
 }
-
-
+	   
 
 Transform {
-	translation	0 0 19
+	translation	0 0 27
 	children [USE viaHe]
 }
 
 Transform {
-	translation	8.5 0 11.5
-	scale 0.745 1 1
+	translation	9.6 0 16.5
+	scale 0.91 1 1
 	rotation 0 1 0 1.57
 	children [USE viaHe ]
 }
 Transform {
-	scale 0.745 1 1
-	translation	-12.45 0 11.5
+	scale 0.91 1 1
+	translation	-15.7 0 16.5
 	rotation 0 1 0 1.57
 	children [USE viaHe ]
 }

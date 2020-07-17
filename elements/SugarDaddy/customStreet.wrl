@@ -4,307 +4,148 @@
 
 DEF	duong Transform	{
 	children [Transform {
-		translation	 0 0 0
-		children [
-			Shape {
-				appearance Appearance {
-					material Material {
-					diffuseColor  0 0 0
+			translation	 0 0 0
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor  0 0 0
+						}
 					}
+					geometry Box {size 35 .003 4}
 				}
-				geometry Box {size 25 .003 2}
-			}
-		]
+			]
 	
-	} ]
+		} ]
 }
 
 
 
-#Inline {url "C:\Users\quang\Desktop\New folder\viahe.wrl"}
-Transform {
-	translation	0 2 0
-}
 
 Transform {
-	translation	12.5 0 11.5
+	translation	15.7 0 15.5
 	rotation  0 1 0 1.57
 	children [
 		USE	duong
 	]
 }
 Transform  {
-	translation	 -12.5 0 11.5
+	translation	 -15.7 0 15.5
 	rotation  0 1 0 1.57
 	children [
 		USE	duong
 	]
 }
 Transform  {
-	translation	0 0 23
+	scale 1.008 1 1
+	translation	0 0 33
 	children [ USE duong ]
 }
 
 Viewpoint {
-	position 0 0 50
+	position 0 0 100
 }
 
-Transform {
-	children [
-		Shape {
-			geometry Box {size 1 1 1}
-		}
-	]
-}
 
 DEF	vachvoi
 Transform {
-translation	 0 0 0
-children [
-	Shape {
-		appearance Appearance {
-			material Material {
-			diffuseColor 1 1 1}
+	translation	 0 0 0
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 1 1 1}
+			}
+			geometry Box {size 1 .04 .2}
 		}
-		geometry Box {size 1 .04 .2}
-	}
-]
-}
-Transform {
-	translation	2 0 0
-	children [USE vachvoi ]
-}
-Transform {
-	translation	4 0 0
-	children [USE vachvoi ]
-}
-Transform {
-	translation	6 0 0
-	children [USE vachvoi ]
-}
-Transform {
-	translation	8 0 0
-	children [USE vachvoi ]
-}
-Transform {
-	translation	10 0 0
-	children [USE vachvoi ]
-}
-Transform {
-	translation	12 0 0
-	children [USE vachvoi ]
-}
-Transform {
-	translation	-2 0 0
-	children [USE vachvoi ]
-}Transform {
-	translation	-4 0 0
-	children [USE vachvoi ]
-}Transform {
-	translation	-6 0 0
-	children [USE vachvoi ]
-}Transform {
-	translation	-8 0 0
-	children [USE vachvoi ]
-}Transform {
-	translation	-10 0 0
-	children [USE vachvoi ]
-}Transform {
-	translation	-12 0 0
-	children [USE vachvoi ]
-}
-
-Transform {
-	translation	2 0 23
-	children [USE vachvoi ]
-}
-Transform {
-	translation	4 0 23
-	children [USE vachvoi ]
-}
-Transform {
-	translation	6 0 23
-	children [USE vachvoi ]
-}
-Transform {
-	translation	8 0 23
-	children [USE vachvoi ]
-}
-Transform {
-	translation	10 0 23
-	children [USE vachvoi ]
-}
-Transform {
-	translation	12 0 23
-	children [USE vachvoi ]
-}
-Transform {
-	translation	-2 0 23
-	children [USE vachvoi ]
-}Transform {
-	translation	-4 0 23
-	children [USE vachvoi ]
-}Transform {
-	translation	-6 0 23
-	children [USE vachvoi ]
-}Transform {
-	translation	-8 0 23
-	children [USE vachvoi ]
-}Transform {
-	translation	-10 0 23
-	children [USE vachvoi ]
-}Transform {
-	translation	-12 0 23
-	children [USE vachvoi ]
-}Transform {
-	translation	0 0 23
-	children [USE vachvoi ]
-}
-
-#vay voi quay
-Transform {
-	translation	12.5 0 1.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}
-Transform {
-	translation	12.5 0 3.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	12.5 0 5.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	12.5 0 7.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	12.5 0 9.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	12.5 0 11.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
 	]
 }
 
-Transform {
-	translation	12.5 0 13.5
-	rotation 0 1 0 1.57
+DEF grVach Group{
 	children [
-		USE	vachvoi
-	]
-}
-Transform {
-	translation	12.5 0 15.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	12.5 0 17.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	12.5 0 19.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	12.5 0 21.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}
+		Transform {
+			translation	0 0 0
+			children [USE vachvoi ]
+		}
+		Transform {
+			translation	2 0 0
+			children [USE vachvoi ]
+		}
+		Transform {
+			translation	4 0 0
+			children [USE vachvoi ]
+		}
+		Transform {
+			translation	6 0 0
+			children [USE vachvoi ]
+		}
+		Transform {
+			translation	8 0 0
+			children [USE vachvoi ]
+		}
+		Transform {
+			translation	10 0 0
+			children [USE vachvoi ]
+		}
+		Transform {
+			translation	12 0 0
+			children [USE vachvoi ]
+		}
+		Transform {
+			translation	14 0 0
+			children [USE vachvoi ]
+		}
+		Transform {
+			translation	15.5 0 0
+			children [USE vachvoi ]
+		}
 
-#trai
+	
 
-Transform {
-	translation	-12.5 0 1.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
+		Transform {
+			translation	-2 0 0
+			children [USE vachvoi ]
+		}Transform {
+			translation	-4 0 0
+			children [USE vachvoi ]
+		}Transform {
+			translation	-6 0 0
+			children [USE vachvoi ]
+		}Transform {
+			translation	-8 0 0
+			children [USE vachvoi ]
+		}Transform {
+			translation	-10 0 0
+			children [USE vachvoi ]
+		}Transform {
+			translation	-12 0 0
+			children [USE vachvoi ]
+		}
+		Transform {
+			translation	-14 0 0
+			children [USE vachvoi ]
+		}
+	
+
+
 	]
-}
-Transform {
-	translation	-12.5 0 3.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	-12.5 0 5.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	-12.5 0 7.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	-12.5 0 9.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	-12.5 0 11.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
+
 }
 
 Transform {
-	translation	-12.5 0 13.5
+	translation	0 0 33
+	children [USE grVach ]
+}
+
+Transform {
 	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
+	translation	16 0 17.8
+	children [USE grVach ]
 }
 Transform {
-	translation	-12.5 0 15.5
 	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	-12.5 0 17.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	-12.5 0 19.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
-}Transform {
-	translation	-12.5 0 21.5
-	rotation 0 1 0 1.57
-	children [
-		USE	vachvoi
-	]
+	translation	-15.5 0 17.8
+	children [USE grVach ]
 }
+
 
