@@ -1,0 +1,5 @@
+#VRML V2.0 utf8
+
+
+Transform {scale 0.25 0.25 0.25 children	[Inline {url "thancay.wrl"}]  }
+Transform {scale 2 1.4 2 translation 0 2.6 0 children	[Inline {url "la.wrl"}]  }
