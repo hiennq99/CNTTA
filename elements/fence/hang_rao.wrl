@@ -1,0 +1,240 @@
+#VRML V2.0 utf8
+DEF	hang_rao Transform {
+	scale 0.1 0.1 0.1
+	children [
+		DEF	thanh_rao Transform {
+	translation	0 -1 0
+	scale 1 2 1
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0 0 0
+					specularColor .63 .92 1
+					ambientIntensity 0
+				}
+			}
+			geometry Box {
+				size 0.1 2 0.1
+			}
+		}
+		DEF	mui_nhon Transform {
+			translation	0 1.25 0
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0 0 0
+							specularColor .63 .92 1
+							ambientIntensity 0
+						}
+					}
+				
+					geometry Cone {
+						bottomRadius 0.06
+						height 0.6
+					}
+			}
+			]
+		}
+	]
+}
+
+# duong
+Transform {
+	translation	1 0 0
+	children [USE thanh_rao ]
+}
+Transform {
+	translation	2 0 0
+	children [USE thanh_rao ]
+}
+Transform {
+	translation	3 0 0
+	children [USE thanh_rao ]
+}
+Transform {
+	translation	4 0 0
+	children [USE thanh_rao ]
+}
+Transform {
+	translation	5 0 0
+	children [USE thanh_rao ]
+}
+Transform {
+	translation	6 0 0
+	children [USE thanh_rao ]
+}
+Transform {
+	translation	7 0 0
+	children [USE thanh_rao ]
+}
+Transform {
+	translation	8 0 0
+	children [USE thanh_rao ]
+}
+Transform {
+	translation	9 0 0
+	children [USE thanh_rao ]
+}
+# thanh ngang
+DEF	thanh_ngang_tren1 Transform {
+	translation	5 0.7 0
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor .33 .34 .6
+					specularColor .29 .29 .29
+					ambientIntensity .103
+					shininess .79
+				}
+			}
+			geometry Box {
+				size 10 0.1 0.1 
+			}
+		}
+	]
+}
+DEF	thanh_ngang_tren2 Transform {
+	translation	5 0 0
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor .33 .34 .6
+					specularColor .29 .29 .29
+					ambientIntensity .103
+					shininess .79
+				}
+			}
+			geometry Box {
+				size 10 0.1 0.1 
+			}
+		}
+	]
+}
+DEF	thanh_ngang_duoi Transform {
+	translation	5 -2 0
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor .33 .34 .6
+					specularColor .29 .29 .29
+					ambientIntensity .103
+					shininess .79
+				}
+			}
+			geometry Box {
+				size 10 0.2 0.1 
+			}
+		}
+	]
+}
+DEF	chan_tuong Transform {
+	translation	5 -3.5 0
+	children [
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor .35 .41 .43
+					specularColor .15 .17 .18
+					emissiveColor .14 .16 .17
+					ambientIntensity .06
+					shininess .32
+				}
+			}
+			geometry Box {
+				size 10 2 0.6
+			}
+		}
+	]
+}
+]}
+#duong
+Transform {
+	translation	1 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	2 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	3 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	4 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	5 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	6 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	7 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	8 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	9 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	10 0 0
+	children [USE hang_rao ]
+}
+#am
+Transform {
+	translation	-1 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	-2 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	-3 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	-4 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	-5 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	-6 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	-7 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	-8 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	-9 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	-10 0 0
+	children [USE hang_rao ]
+}
+Transform {
+	translation	-11 0 0
+	children [USE hang_rao ]
+}

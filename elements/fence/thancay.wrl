@@ -1,0 +1,56 @@
+#VRML V2.0 utf8
+
+ DEF thancay Shape {
+	geometry Extrusion {
+			 #toa do hinh hoc (dung toa do oxy)
+		crossSection [2 0,1.84 0.76 ,1.42 1.42,0.76 1.84,0 2,-0.76 1.84,-1.42 1.42,
+			-1.84 0.76 ,-2 0,-1.84 -0.76 ,-1.42 -1.42,-0.76 -1.84,0 -2,0.76 -1.84,1.42 -1.42,1.84 -0.76 ,2 0]
+		   
+			 #duong xuong song(truc y)
+		    spine	[0 0 0,0.4 5 0,0 8 0.4,0 11 0.4, 0 15 0]
+
+			#ty le thu phong 
+    		scale	[0.6 0.6,0.5 0.5,0.4 0.4,0.3 0.3 ,0.1 0.1 ]
+			
+			#do lam mo
+			creaseAngle	1
+
+
+    		beginCap  TRUE
+
+
+    		endCap    TRUE
+
+			#net lien
+    		solid     FALSE
+
+		}
+    appearance Appearance {
+     texture ImageTexture {
+      url "anhdep/thancay.jpg"
+     }
+   }
+}
+
+Transform {
+rotation 1 0 1 0.78
+translation	0 6 0
+scale 0.5 0.5 0.5
+children [
+USE thancay ]
+}
+Transform {
+rotation 0 0 1 -0.78
+translation	0 9 0
+scale 0.35 0.35 0.35
+children [
+USE thancay ]
+}
+Transform {
+rotation 1 0 -1 -0.5
+translation	0 12 0
+scale 0.2 0.2 0.2
+children [
+USE thancay ]
+}
+

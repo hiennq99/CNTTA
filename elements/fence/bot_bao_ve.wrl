@@ -1,0 +1,139 @@
+#VRML V2.0 utf8
+
+DEF	nen_nha Transform {
+	translation	0 0 0
+	children [
+		Shape {
+			appearance Appearance {
+				material DEF mau1 Material {
+					diffuseColor .39 .46 .42
+					specularColor .53 .53 .53
+					ambientIntensity .103
+					shininess .93
+				}
+			}
+			geometry Box {size 2.2 0.1 2.2}
+		}]
+	}
+	DEF	noc_nha Transform {
+		translation	0 3 0
+		children [USE nen_nha ]
+	}
+	DEF	chantuong1 Transform {
+		translation	0 0.6 1
+		children [
+			Shape {
+				appearance Appearance {
+					material DEF mau2 Material {
+						diffuseColor .61 .61 .61
+						specularColor .77 .76 .76
+						ambientIntensity .14
+						shininess .9
+					}
+				}
+				geometry Box {size 2 1.2 0.1}
+			}
+		]
+	}
+	DEF chantuong2 Transform {
+		rotation 0 1 0 1.57
+		children [USE chantuong1 ]
+	}
+	Transform {
+		translation	-2 0 0
+		children [USE chantuong2 ]
+	}
+	DEF cot1 Transform {
+		translation	1 1.5 -1
+		children [
+			Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor .61 .61 .61
+						specularColor .77 .76 .76
+						ambientIntensity .14
+						shininess .9
+					}
+				}
+				geometry Box {size 0.1 3 0.1}
+			}
+		]
+	}
+	Transform {
+		translation	0 0 2
+		children [USE cot1 ]
+	}
+	Transform {
+		translation	-2 0 0
+		children [USE cot1 ]
+	}
+	Transform {
+		translation	-2 0 2
+		children [USE cot1 ]
+	}
+	DEF	xa Transform {
+		translation	0 3.1 -1
+		children [
+			Shape {
+				appearance Appearance {
+					material USE mau1
+				}
+				geometry Box {size 2.2 0.2 0.2}
+			}
+		]
+	}
+	Transform {
+		translation	0 0 2
+		children [ USE xa ]
+	}
+	DEF	xa1 Transform {
+		rotation 0 1 0 1.57
+		children [USE xa ]
+	}
+	Transform {
+		translation	2 0 0
+		children [USE xa1 ]
+	}
+	DEF	tuongtren Transform	{
+		translation	1 2.75 0
+		rotation 0 1 0 1.57
+		children [
+			Shape {
+				appearance Appearance {
+					material USE mau2
+				}
+				geometry Box {size 2 0.5 0.1}
+			}
+		]
+	}
+	Transform {
+		translation	-2 0 0
+		children [USE tuongtren	]
+	}
+	Transform {
+		translation	0 0 2
+		rotation 0 1 0 1.57
+		children [USE tuongtren	]
+	}
+	Transform {
+		translation	-0.55 1.5 -1
+		children [
+			Shape {
+				appearance Appearance {
+					material USE mau2
+				}
+				geometry Box {size 0.9 3 0.1}
+			}
+		]
+	}
+	Transform {
+		translation	0.45 2.75 -1
+		children [
+			Shape {
+				appearance Appearance {
+					material USE mau2
+				}
+				geometry Box {size 1.1 0.5 0.1}
+			}
+		]
+	}

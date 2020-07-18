@@ -36,5 +36,51 @@ Group {
 				{url "elements/People/person1.wrl"}
 			]
 		}
+		Transform {
+			scale 1.06 3.3 1.15
+			translation	0 0.95 -14
+			children [Inline {url "elements/fence/hang_rao_hoan_chinh.wrl"}]
+		}
+		Transform {
+			translation	3.1 -0.48 10.4
+			scale 0.9 1 0.9
+			children [ Inline { url	"elements/fence/bot_bao_ve.wrl"}]
+		}
+		Transform {
+			translation	13 1 5
+			scale 0.5 0.5 0.5
+			children [Inline { url "elements/fence/caytrenhe.wrl"}]
+		}
+		Transform {
+			translation	13 1 -5
+			scale 0.5 0.5 0.5
+			children [Inline { url "elements/fence/caytrenhe.wrl"}]
+		}
+		Transform {
+			translation	-13 1 5
+			scale 0.5 0.5 0.5
+			children [Inline { url "elements/fence/caytrenhe.wrl"}]
+		}
+		Transform {
+			translation	-13 1 -5
+			scale 0.5 0.5 0.5
+			children [Inline { url "elements/fence/caytrenhe.wrl"}]
+		}
+		Transform {
+			translation	5 1 -16
+			scale 0.5 0.5 0.5
+			children [Inline { url "elements/fence/caytrenhe.wrl"}]
+		}
+				Transform {
+			translation	-5 1 -16
+			scale 0.5 0.5 0.5
+			children [Inline { url "elements/fence/caytrenhe.wrl"}]
+		}
+				Transform {
+			translation	-5 1 12
+			scale 0.5 0.5 0.5
+			children [Inline { url "elements/fence/caytrenhe.wrl"}]
+		}
 	]
 }
+
