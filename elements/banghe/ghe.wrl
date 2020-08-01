@@ -1,0 +1,112 @@
+#VRML V2.0 utf8
+
+#Mặt ghế
+Transform {
+	children [
+		Shape {
+			geometry Box {
+				size .5 .01 .5
+			}
+			appearance Appearance {
+				texture	ImageTexture {
+					url	["images\Go1.jpg"]
+				}
+			}
+		}
+	]
+}
+#chân ghế
+DEF hang1 Transform {
+	children [
+		DEF	chan1 Transform	{
+			translation	-.20 -.25 -.20
+			children [
+				Shape {
+					geometry Cylinder {
+						height .5
+						radius .02
+					}
+					appearance Appearance {
+						texture	ImageTexture {
+							url	["images\Go1.jpg"]
+						}
+					}
+				}
+			]
+		}
+		Transform {
+			translation	0 0 .4
+			children [
+				USE	chan1 
+			]
+		}
+	]
+}
+Transform {
+	translation	.4 0 0
+	children [
+		USE	hang1
+	]
+}
+
+#Thanh đỡ lưng
+DEF thanhlung Transform {
+	translation	.25 .24 .2
+	rotation 0 0 1 -.25
+	children [
+		Shape {
+			geometry Box {
+				size .01 .5 .04
+			}
+			appearance Appearance {
+				texture	ImageTexture {
+					url	["images\Go1.jpg"]
+				}
+			}
+		}
+	]
+}
+Transform {
+	translation	0 0 -.38
+	children [
+		USE	thanhlung
+	]
+}
+
+#Mặt Lưng
+DEF lung Transform {
+	translation	.31 .47 0.01
+	rotation 0 0 1 -.25
+	scale 1 1 1.2
+	children [
+		Shape {
+			geometry Box {
+				size .01 .03 .35
+			}
+			appearance Appearance {
+				texture	ImageTexture {
+					url	["images\Go1.jpg"]
+				}
+			}
+		}
+	]
+}
+
+Transform {
+	translation	-.0175 -.07 0
+	children [
+		USE	lung
+	]
+}
+Transform {
+	translation	-.035 -.14 0
+	children [
+		USE	lung
+	]
+}
+Transform {
+	translation	-.0525 -.21 0
+	children [
+		USE	lung
+	]
+}
