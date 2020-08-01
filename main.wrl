@@ -20,7 +20,7 @@ NavigationInfo {
 }
 
 Viewpoint {
-	position 0 -0.35 35
+	position 0 12 50
 }
 
 Group {
@@ -71,12 +71,12 @@ Group {
 			scale 0.5 0.5 0.5
 			children [Inline { url "elements/fence/caytrenhe.wrl"}]
 		}
-				Transform {
+		Transform {
 			translation	-5 1 -16
 			scale 0.5 0.5 0.5
 			children [Inline { url "elements/fence/caytrenhe.wrl"}]
 		}
-				Transform {
+		Transform {
 			translation	-5 1 12
 			scale 0.5 0.5 0.5
 			children [Inline { url "elements/fence/caytrenhe.wrl"}]

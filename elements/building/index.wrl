@@ -1,38 +1,43 @@
 #VRML V2.0 utf8
 
+EXTERNPROTO	Wall-1 [field SFVec3f size ] "_proto.wrl#Wall-1"
 Viewpoint {
 	position 0 10 40
 }
 
 DEF	TOA_NHA Group {
 	children [
-		Inline { url "components/bac_thang/_index.wrl" }
 		Transform {
-			translation	0 0.5 -1
+			translation	0 -0.5 1.1
+			children Inline { url "components/bac_thang/_index.wrl" }
+		}
+		Transform {
+			translation	0 0 0
 			children Inline	{ url "components/tang_mot/_index.wrl" }
 		}
 		# Tầng 2
 		Transform {
-			translation	5 5.2 -1
+			translation	0 4 0
 			children Inline	{ url "components/tang_tren/_index.wrl" }
 		}
 		Transform {
-			translation	5 7.9 -1
+			translation	0 7 0
 			children Inline	{ url "components/tang_tren/_index.wrl" }
 		}
 		Transform {
-			translation	5 10.1 -1
+			translation	0 10 0
 			children Inline	{ url "components/tang_tren/_index.wrl" }
 		}
 		Transform {
-			translation	5 12.8 -1
+			translation	0 13 0
 			children Inline	{ url "components/tang_tren/_index.wrl" }
 		}
 		Transform {
-			translation	5 15.5 -1
+			translation	0 16 0
 			children Inline	{ url "components/tang_tren/_index.wrl" }
 		}
 		Transform {
+			translation	0 0 0 
 			children Inline	{ url "components/tang_thuong/_index.wrl" }
 		}
 	]	

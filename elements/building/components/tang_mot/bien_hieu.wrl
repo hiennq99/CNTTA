@@ -1,0 +1,78 @@
+#VRML V2.0 utf8
+#Biển hiệu
+EXTERNPROTO	Wall-1 [field SFVec3f size] "../../_proto.wrl#Wall-1"
+EXTERNPROTO	Wall-2 [field SFVec3f size] "../../_proto.wrl#Wall-2"
+EXTERNPROTO	Wall-3 [field SFVec3f size] "../../_proto.wrl#Wall-3"
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size, field SFFloat trans] "../../_proto.wrl#Wall"
+
+Transform {
+	translation	0 5 0.15
+	children [
+		Wall { size 2.4 2 0.01 color 0.647 0.298 0.313 }
+		Transform {
+			translation	0 0 0.1
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0.721 0.662 0.5
+						}
+					}
+					geometry Text {
+						string ["QUẬN UỶ"]
+						fontStyle FontStyle	{
+							family "SERIF"
+							topToBottom	TRUE
+							size 0.3
+							justify	"MIDDLE"
+							spacing	1
+							style "PLAIN"
+						}
+						length [1.2]
+						maxExtent 10
+					}
+				}
+			]
+		}
+		Transform {
+			translation	0 -0.6 0.1
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0.721 0.662 0.5
+						}
+					}
+					geometry Text {
+						string ["BẮC TỪ LIÊM"]
+						fontStyle FontStyle	{
+							family "Open Sans"
+							topToBottom	TRUE
+							size 0.6
+							justify	"MIDDLE"
+							spacing	1
+							style "BOLD"
+						}
+						length [2]
+						maxExtent 10
+					}
+				}
+			]
+		}
+		Transform {
+			translation	0 0.6 0.1
+			children [
+				Shape {
+					appearance Appearance {
+						texture	ImageTexture {
+							url	"../../images/logo.png"
+						}
+					}
+					geometry Box {
+						size 0.5 0.5 0.01
+					}
+				}
+			]
+		}
+	]
+}

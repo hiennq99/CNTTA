@@ -1,5 +1,4 @@
 #VRML V2.0 utf8
-
 # Sàn nhà
-EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "_proto.wrl"
-Wall { size 14 1 2 }
+EXTERNPROTO	Bugge [field SFColor color, field SFVec3f size] "../../_proto.wrl#Bugge"
+Bugge { size 14 1 2 }

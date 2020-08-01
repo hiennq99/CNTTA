@@ -1,14 +1,15 @@
 #VRML V2.0 utf8
+#Mặt trên
+EXTERNPROTO	Wall-1 [field SFVec3f size] "../../_proto.wrl#Wall-1"
+EXTERNPROTO	Wall-2 [field SFVec3f size] "../../_proto.wrl#Wall-2"
+EXTERNPROTO	Wall-3 [field SFVec3f size] "../../_proto.wrl#Wall-3"
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size, field SFFloat trans] "../../_proto.wrl#Wall"
 
-# Mặt trần
-EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "_proto.wrl"
-
-Group {
-	children [
-		Wall { size 18.3 0.1 12.3 }
-		Transform {
-			translation	0 0.2 0
-			children Wall { size 18.1 0.1 12.1, color 1 1 1 }
-		}
-	]
+Transform {
+	translation	0 3.95 -5.85
+	children Wall { size 20.2 0.1 12.2 color 1 1 1 }
+}
+Transform {
+	translation	0 3.75 -5.85
+	children Wall { size 20.4 0.1 12.4 color 1 1 1 }
 }
