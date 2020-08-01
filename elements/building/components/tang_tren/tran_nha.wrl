@@ -1,6 +1,0 @@
-#VRML V2.0 utf8
-
-# Trần nhà
-EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "_proto.wrl"
-
-Wall { size 7.8 0.03 11.5 color 1 1 1 }

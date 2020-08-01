@@ -1,0 +1,248 @@
+#VRML V2.0 utf8
+#Mái che
+EXTERNPROTO	Wall-1 [field SFVec3f size] "../../_proto.wrl#Wall-1"
+EXTERNPROTO	Wall-2 [field SFVec3f size] "../../_proto.wrl#Wall-2"
+EXTERNPROTO	Wall-3 [field SFVec3f size] "../../_proto.wrl#Wall-3"
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size, field SFFloat trans] "../../_proto.wrl#Wall"
+#Thanh ngang trên
+DEF ThanhNgang Transform {
+	translation	0 3.1 0.15
+	children Wall { size 15 0.05 0.2 color 1 1 1 }
+}
+Transform {
+	translation	0 0 1
+	children USE ThanhNgang
+}
+#Thanh dọc
+DEF	ThanhDoc Transform {
+	translation	0 3.1 0.65
+	children [
+		DEF	ThanhDocNho Wall { size 0.1 0.05 1 color 1 1 1 }
+		Transform {
+			translation	0.5 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	1 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	1.5 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	2 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	2.5 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	3 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	3.5 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	4 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	4.5 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	5 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	5.5 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	6 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	6.5 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	7 0 0 
+			children USE ThanhDocNho
+		}
+		Transform {
+			translation	7.45 0 0 
+			children USE ThanhDocNho
+		}
+	]
+}
+Transform {
+	translation	-7.45 0 0
+	children USE ThanhDoc
+}
+#Tấm kính
+DEF	TamKinh Transform {
+	translation	0 3.1 0.65
+	children Wall { size 15 0.03 1 trans 0.5 }
+}
+#Tấm cao su
+DEF	CaoSu Transform	{
+	translation	0 3 0.15
+	children [
+		DEF	CaoSuNho Wall { size 0.2 0.3 0.01 }
+		Transform {
+			translation	1.875 0 0
+			children USE CaoSuNho
+		}
+		Transform {
+			translation	3.75 0 0
+			children USE CaoSuNho
+		}
+		Transform {
+			translation	5.625 0 0
+			children USE CaoSuNho
+		}
+		Transform {
+			translation	7.5 0 0
+			children USE CaoSuNho
+		}
+	]
+}
+Transform {
+	translation	-7.5 0 0 
+	children USE CaoSu
+}
+#Tấm cao su trên
+DEF	CaoSuTren Transform	{
+	translation	0 3.65 0.15
+	children [
+		DEF	CaoSuTrenNho Wall { size 0.1 0.1 0.01 }
+		Transform {
+			translation	1.875 0 0
+			children USE CaoSuTrenNho
+		}
+		Transform {
+			translation	3.75 0 0
+			children USE CaoSuTrenNho
+		}
+		Transform {
+			translation	5.625 0 0
+			children USE CaoSuTrenNho
+		}
+		Transform {
+			translation	7.5 0 0
+			children USE CaoSuTrenNho
+		}
+	]
+}
+Transform {
+	translation	-7.5 0 0 
+	children USE CaoSuTren
+}
+#Tấm thanh nối 
+DEF ThanhNoi Transform {
+	translation	0 3.5 0.5
+	rotation 1 0 0 -1
+	children [
+		DEF ThanhNoiNho Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 0 0 0
+					specularColor .29 .3 .29
+					ambientIntensity 0
+					shininess .08
+				}
+			}
+			geometry Cylinder {
+				height 1.5
+				radius 0.01
+			}
+		}
+		Transform {
+			translation	1.875 0 0
+			children USE ThanhNoiNho
+		}
+		Transform {
+			translation	3.75 0 0
+			children USE ThanhNoiNho
+		}
+		Transform {
+			translation	5.625 0 0
+			children USE ThanhNoiNho
+		}
+		Transform {
+			translation	7.5 0 0
+			children USE ThanhNoiNho
+		}
+	]
+}
+Transform {
+	translation	-7.5 0 0 
+	children USE ThanhNoi
+}
+#Lá cờ
+DEF	DayLaCo Group {
+	children [
+		DEF	LaCo Transform {
+			translation	0.5 3.5 1.1
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 1 1 1
+						}
+					}
+					geometry Cylinder {
+						radius 0.01
+						height 0.8
+					}
+				}
+				Transform {
+					translation	0.4 0.2 0
+					children [
+						Shape {
+							appearance Appearance {
+								texture	ImageTexture {
+									url	"../../images/flag.jpg"
+								}
+							}
+							geometry Box {
+								size 0.8 0.5 0.01
+							}
+						}
+					]
+				}
+			]
+		}
+		Transform {
+			translation	1.2 0 0 
+			children USE LaCo
+		}
+		Transform {
+			translation	2.4 0 0 
+			children USE LaCo
+		}
+		Transform {
+			translation	3.6 0 0 
+			children USE LaCo
+		}
+		Transform {
+			translation	4.8 0 0 
+			children USE LaCo
+		}
+		Transform {
+			translation	6 0 0 
+			children USE LaCo
+		}
+	]
+}
+Transform {
+	translation	-7.2 0 0
+	children USE DayLaCo
+}
+
+

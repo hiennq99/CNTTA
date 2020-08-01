@@ -1,31 +1,29 @@
 #VRML V2.0 utf8
-
-# Căn nhà ở giữa
-EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "_proto.wrl"
+#Căn nhà ở giữa
+EXTERNPROTO	Wall-1 [field SFVec3f size] "../../_proto.wrl#Wall-1"
+EXTERNPROTO	Wall-2 [field SFVec3f size] "../../_proto.wrl#Wall-2"
+EXTERNPROTO	Wall-3 [field SFVec3f size] "../../_proto.wrl#Wall-3"
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size, field SFFloat trans] "../../_proto.wrl#Wall"
 # Sàn
 Transform {
-	translation	-5 -1.2 -6.4
-	children [
-		Wall { size 2 0.03 11 color 1 1 1 }
-	]
+	translation	0 -1.2 -6.75
+	children Wall { size 2.4 0.03 10 color 1 1 1 }
 }
 # Tấm sau lưng
 Transform {
-	translation	-5 0.1 -11.98
-	children Wall { size 2 2.7 0.03 }
+	translation	0 0.3 -11.7
+	children Wall-1 { size 2.4 3 0.3 }
 }
 # Bệ lan can trước mặt
 Transform {
-	translation	-5 -1 -1
-	children Wall { size 2 0.5 0.5 color 1 1 1 }
+	translation	0 -1 -2
+	children Wall { size 2.4 0.5 0.5 color 1 1 1 }
 }
 DEF grLanCan Group {
 	children [
 		DEF ThanhLanCan Transform {
-			translation	-5 -0.5 -1
-			children [
-				Wall { size 0.02 0.5 0.02 color 0 0 0 }
-			]
+			translation	1.2 -0.5 -2
+			children Wall { size 0.02 0.5 0.02 }
 		}
 		Transform {
 			translation	-0.1 0 0
@@ -67,13 +65,65 @@ DEF grLanCan Group {
 			translation	-1 0 0
 			children USE ThanhLanCan
 		}
+		Transform {
+			translation	-1.1 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-1.2 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-1.3 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-1.4 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-1.5 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-1.6 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-1.7 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-1.8 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-1.9 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-2 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-2.1 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-2.2 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-2.3 0 0
+			children USE ThanhLanCan
+		}
+		Transform {
+			translation	-2.4 0 0
+			children USE ThanhLanCan
+		}
 	]
 }
 Transform {
-	translation	1 0 0
-	children USE grLanCan
-}
-Transform {
-	translation	-5 -0.23 -1
-	children Wall { size 2 0.05 0.05 color 0 0 0 } 
+	translation	0 -0.23 -2
+	children Wall { size 2.4 0.05 0.05 color 0 0 0 } 
 }

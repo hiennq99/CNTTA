@@ -1,18 +1,17 @@
 #VRML V2.0 utf8
-
-# Tay vịn 2 bên
-EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "_proto.wrl"
+#Tay vịn 2 bên
+EXTERNPROTO	Bugge [field SFColor color, field SFVec3f size] "../../_proto.wrl#Bugge"
 Group {
 	children [
-		# Cục ở dưới
+		#Cục ở dưới
 		Transform {
 			translation	0 0 2
-			children Wall { size 0.2 1 2 }
+			children Bugge { size 0.2 1 2 }
 		}
-		# Cục bên trên
+		#Cục bên trên
 		Transform {
 			translation	0 0.75 1.2
-			children Wall { size 0.2 0.5 0.4 }
+			children Bugge { size 0.2 0.5 0.4 }
 		}
 		Transform {
 			translation	-0.1 0.5 1

@@ -1,76 +1,78 @@
 #VRML V2.0 utf8
+#Mặt trước
+EXTERNPROTO	Wall-1 [field SFVec3f size] "../../_proto.wrl#Wall-1"
+EXTERNPROTO	Wall-2 [field SFVec3f size] "../../_proto.wrl#Wall-2"
+EXTERNPROTO	Wall-3 [field SFVec3f size] "../../_proto.wrl#Wall-3"
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size, field SFFloat trans] "../../_proto.wrl#Wall"
 
-EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "_proto.wrl"
-# Mặt trước
-# Tường trên
-Transform {
-	translation	0 1.35 0
-	children Wall { size 8 0.2 0.3 }
+Viewpoint {
+	position 0 0 20
 }
-
-# Tường nhỏ trên
-Transform {
-	translation	-2.8 1.2 0
-	children Wall { size 2 0.1 0.3 }
-}
-Transform {
-	translation	2.8 1.2 0
-	children Wall { size 2 0.1 0.3 }
-}
-
-# Tường nhỏ dưới
-Transform {
-	translation	-2.8 -0.75 0
-	children Wall { size 2 1 0.3 } 
-}
-
-Transform {
-	translation	2.8 -0.75 0
-	children Wall { size 2 1 0.3 } 
-}
-
-# Tường 2 bên
-Transform {
-	translation	2 0 0
-	children Wall { size 0.6 2.5 0.3 } 
-}
-Transform {
-	translation	-2 0 0
-	children Wall { size 0.6 2.5 0.3 } 
-}
-
-Transform {
-	translation	-3.7 0 0
-	children Wall { size 0.6 2.5 0.3 }
-}
-
-Transform {
-	translation	3.7 0 0
-	children Wall { size 0.6 2.5 0.3 } 
-}
-
-# Khung cửa sổ
-DEF KhungCuaSo Transform {
-	translation	-2.85 1.2 0.2
+Group {
 	children [
-		Wall { size 1.3 0.1 0.1 color 1 1 1 }
-		Transform {
-			translation	0 -1.5 0
-			children Wall { size 1.3 0.1 0.1 color 1 1 1 }
+		#Tường ngang mỏng
+		DEF	TuongNgangMong Transform {
+			translation	5.6 0 0
+			children Wall-1 { size 8.8 0.4 0.3 }
 		}
 		Transform {
-			translation	-0.6 -0.8 0
-			children Wall { size 0.1 1.5 0.1 color 1 1 1 }
+			translation	0 2.6 0
+			children USE TuongNgangMong
+		}
+		#Tường dọc
+		DEF	TuongDoc Transform {
+			translation	1.7 1.3 0
+			children Wall-1 { size 1 3 0.3 }
 		}
 		Transform {
-			translation	0.6 -0.8 0
-			children Wall { size 0.1 1.5 0.1 color 1 1 1 } 
+			translation	2.2 0 0
+			children USE TuongDoc
+		}
+		Transform {
+			translation	5.6 0 0
+			children USE TuongDoc
+		}
+		Transform {
+			translation	7.8 0 0
+			children USE TuongDoc
+		}
+		#Tường ngang dày
+		DEF	TuongNgangDay Transform	{
+			translation	2.8 0.4 0
+			children Wall-1 { size 2 1.2 0.3 }
+		}
+		Transform {
+			translation	5.6 0 0
+			children USE TuongNgangDay
+		}
+		#Viền cửa sổ
+		DEF	VienCuaSo Group	{
+			children [
+				DEF VienNgang Transform {
+					translation 2.8 2.35 0.2
+					children Wall { size 1.4 0.1 0.1 color 1 1 1 }
+				}
+				Transform {
+					translation 0 -1.4 0
+					children USE VienNgang
+				}
+				DEF VienDoc Transform {
+					translation 2.15 1.7 0.2
+					children Wall { size 0.1 1.4 0.1 color 1 1 1 }
+				}
+				Transform {
+					translation 1.3 0 0
+					children USE VienDoc
+				}
+			]
+		}
+		Transform {
+			translation	5.6 0 0
+			children USE VienCuaSo
+		}
+		Transform {
+			translation	5.6 -0.2 0.18
+			children Inline	{ url "lan_can.wrl" }
 		}
 	]
 }
-Transform {
-	translation	5.7 0 0
-	children USE KhungCuaSo
-}
-
-

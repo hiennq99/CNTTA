@@ -1,0 +1,67 @@
+#VRML V2.0 utf8
+#Màu tường loại 1
+PROTO Wall-1 [field SFVec3f size 1 1 1] {
+	Shape {
+		appearance Appearance {
+			texture	ImageTexture {
+				url	"../../images/wall-1.png"
+			}
+		}
+		geometry Box {
+			size IS	size
+		}
+	}
+}
+#Màu tường loại 2
+PROTO Wall-2 [field SFVec3f size 1 1 1] {
+	Shape {
+		appearance Appearance {
+			texture	ImageTexture {
+				url	"../../images/wall-2.png"
+			}
+		}
+		geometry Box {
+			size IS	size
+		}
+	}
+}
+#Màu tường loại 3
+PROTO Wall-3 [field SFVec3f size 1 1 1] {
+	Shape {
+		appearance Appearance {
+			texture	ImageTexture {
+				url	"../../images/wall-3.png"
+			}
+		}
+		geometry Box {
+			size IS	size
+		}
+	}
+}
+#Hình hộp cơ bản
+PROTO Wall [field SFColor color 0 0 0, field SFVec3f size 1 1 1, field SFFloat trans 0] {
+	Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor IS	color
+				transparency IS	trans
+			}
+		}
+		geometry Box {
+			size IS	size
+		}
+	}
+}
+#Màu cầu thang
+PROTO Bugge [field SFColor color 0.9 0.8 0.7, field SFVec3f size 1 1 1] {
+	Shape {
+		appearance Appearance {
+			material Material {
+				diffuseColor IS	color
+			}
+		}
+		geometry Box {
+			size IS	size
+		}
+	}
+}

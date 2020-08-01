@@ -1,28 +1,45 @@
 #VRML V2.0 utf8
-
-EXTERNPROTO	Wall [field SFColor color, field SFVec3f size ] "_proto.wrl"
-# Tầng thượng
-Transform {
-	translation	5 17.4 -7
-	children Wall { size 8 1 12 }
+#Tầng thượng
+EXTERNPROTO	Wall-1 [field SFVec3f size] "../../_proto.wrl#Wall-1"
+EXTERNPROTO	Wall-2 [field SFVec3f size] "../../_proto.wrl#Wall-2"
+EXTERNPROTO	Wall-3 [field SFVec3f size] "../../_proto.wrl#Wall-3"
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size, field SFFloat trans] "../../_proto.wrl#Wall"
+#Mốc 1
+DEF	MatNen Group {
+	children [
+		Transform {
+			translation	5.6 19 -5.85
+			children Wall-1 { size 8.8 1 12 }
+		}
+		DEF	MatBen Transform {
+			translation	9.85 19 -5.85
+			children Wall-1 { size 0.3 1 12 }
+		}
+		Transform {
+			translation	-8.55 0 0
+			children USE MatBen
+		}
+	]
 }
 Transform {
-	translation	-5 17.4 -7
-	children Wall { size 8 1 12 }
+	translation	-11.2 0 0 
+	children USE MatNen
+}
+#Tấm ở giữa
+Transform {
+	translation	0 19 -6.85
+	children Wall-1 { size 3 1 10 }
+}
+#Tấm trắng bên trên cùng
+Transform {
+	translation	5.6 19.5 -5.85
+	children Wall { size 9 0.05 12.4 color 1 1 1 }
 }
 Transform {
-	translation	0 17.4 -7.5
-	children Wall { size 2 1 11 }
+	translation	-5.6 19.5 -5.85
+	children Wall { size 9 0.05 12.4 color 1 1 1 }
 }
 Transform {
-	translation	5 17.9 -7
-	children Wall { size 8.5 0.05 12.4 color 1 1 1 }
-}
-Transform {
-	translation	-5 17.9 -7
-	children Wall { size 8.5 0.05 12.4 color 1 1 1 }
-}
-Transform {
-	translation	0 17.9 -7.45
-	children Wall { size 2 0.05 11.5 color 1 1 1 }
+	translation	0 19.5 -6.8
+	children Wall { size 3 0.05 10.5 color 1 1 1 }
 }
