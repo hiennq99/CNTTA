@@ -192,6 +192,68 @@ Group {
 			rotation 0 1 0 1.57
 			children [Inline {url "elements/maytinh/maytinh.wrl"}]
 		}
+		#ghe
+		Transform {
+			translation	-8.3 0.5 -1
+			scale 0.5 0.5 0.5
+			rotation 0 1 0 1.57
+			children [Inline {url "elements/banghe/ghedo.wrl"}]
+		}
+		Transform {
+			translation	-8.3 0.5 -2.8
+			scale 0.5 0.5 0.5
+			rotation 0 1 0 1.57
+			children [Inline {url "elements/banghe/ghedo.wrl"}]
+		}
+		Transform {
+			translation	-8.3 0.5 -4.6
+			scale 0.5 0.5 0.5
+			rotation 0 1 0 1.57
+			children [Inline {url "elements/banghe/ghedo.wrl"}]
+		}
+		Transform {
+			translation	-8.3 0.5 -6.4
+			scale 0.5 0.5 0.5
+			rotation 0 1 0 1.57
+			children [Inline {url "elements/banghe/ghedo.wrl"}]
+		}
+		Transform {
+			translation	-8.3 0.5 -8.2
+			scale 0.5 0.5 0.5
+			rotation 0 1 0 1.57
+			children [Inline {url "elements/banghe/ghedo.wrl"}]
+		}
+		#nguoingoighe
+		Transform {
+			translation	-8.3 0.75 -1
+			scale 0.2 0.2 0.2
+			rotation 0 1 0 1.57
+			children [Inline {url "elements/nguoingoi/nguoingoi.wrl"}]
+		}
+		Transform {
+			translation	-8.3 0.75 -2.8
+			scale 0.2 0.2 0.2
+			rotation 0 1 0 1.57
+			children [Inline {url "elements/nguoingoi/nguoingoi.wrl"}]
+		}
+		Transform {
+			translation	-8.3 0.75 -4.6
+			scale 0.2 0.2 0.2
+			rotation 0 1 0 1.57
+			children [Inline {url "elements/nguoingoi/nguoingoi.wrl"}]
+		}
+		Transform {
+			translation	-8.3 0.75 -6.4
+			scale 0.2 0.2 0.2
+			rotation 0 1 0 1.57
+			children [Inline {url "elements/nguoingoi/nguoingoi.wrl"}]
+		}
+		Transform {
+			translation	-8.3 0.75 -8.2
+			scale 0.2 0.2 0.2
+			rotation 0 1 0 1.57
+			children [Inline {url "elements/nguoingoi/nguoingoi.wrl"}]
+		}
 	]
 }
 
