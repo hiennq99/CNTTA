@@ -42,7 +42,7 @@ Group {
 			children [Inline {url "elements/fence/hang_rao_hoan_chinh.wrl"}]
 		}
 		Transform {
-			translation	3.1 -0.48 10.4
+			translation	-4 -0.48 10.34
 			scale 0.9 1 0.9
 			children [ Inline { url	"elements/fence/bot_bao_ve.wrl"}]
 		}
