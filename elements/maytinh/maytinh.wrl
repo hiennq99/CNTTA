@@ -1,0 +1,82 @@
+#VRML V2.0 utf8
+# màn hình
+
+DEF	manhinh Transform {
+	rotation 0 0 1 -1.57
+	children [
+		Transform {
+	translation	0 0 0
+	children[
+		Shape {
+			geometry Box {size 0.9 1.8 0.1}
+			appearance Appearance {
+				material Material {
+					diffuseColor 0 0 0
+				}
+			}
+		}
+	]
+}
+
+Transform {
+	translation	0.5 0 0
+	children[
+		Shape {
+			geometry Box {size 0.2 0.1 0.1}
+			appearance Appearance {
+				material Material {
+					diffuseColor 0 0 0
+				}
+			}
+		}
+	]
+}
+
+Transform {
+	translation	0.6 0 0
+	children[
+		Shape {
+			geometry Box {size 0.1 0.4 0.2}
+			appearance Appearance {
+				material Material {
+					diffuseColor 0 0 0
+				}
+			}
+		}
+	]
+}
+]
+}
+DEF	banphim Transform {
+	translation	0.1 -0.6 -0.5
+	scale 0.4 0.4 0.4
+	rotation 1 0 0 1.57
+	children [
+		Transform {
+	children [
+		Shape {
+			geometry Box {size 4 1.5 0.1 }
+			appearance Appearance {
+				texture	ImageTexture {url "..\maytinh\banphim.png"}
+			}
+		}
+		
+	]
+}
+Transform {
+	translation	0 0 0.05
+	children [
+		Shape {
+			geometry Box {size 4 1.5 0.1 }
+			appearance Appearance {
+				texture	ImageTexture {url "..\maytinh\den.jpg"}
+			}
+		}
+		
+	]
+}
+]
+}
+
+
+
