@@ -46,33 +46,19 @@ Group {
 			children USE TuongNgangDay
 		}
 		#Viền cửa sổ
-		DEF	VienCuaSo Group	{
-			children [
-				DEF VienNgang Transform {
-					translation 2.8 2.35 0.2
-					children Wall { size 1.4 0.1 0.1 color 1 1 1 }
-				}
-				Transform {
-					translation 0 -1.4 0
-					children USE VienNgang
-				}
-				DEF VienDoc Transform {
-					translation 2.15 1.7 0.2
-					children Wall { size 0.1 1.4 0.1 color 1 1 1 }
-				}
-				Transform {
-					translation 1.3 0 0
-					children USE VienDoc
-				}
-			]
-		}
+		Inline { url "cua_so.wrl" }
 		Transform {
 			translation	5.6 0 0
-			children USE VienCuaSo
+			children Inline { url "cua_so.wrl" }
 		}
 		Transform {
 			translation	5.6 -0.2 0.18
 			children Inline	{ url "lan_can.wrl" }
+		}
+		#Cửa ra vào
+		Transform {
+			translation	5.6 1.3 -1
+			children Inline	{ url "cua_ra_vao.wrl" }
 		}
 	]
 }

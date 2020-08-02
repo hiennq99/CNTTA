@@ -33,13 +33,13 @@ Transform {
 #Tấm trắng bên trên cùng
 Transform {
 	translation	5.6 19.5 -5.85
-	children Wall { size 9 0.05 12.4 color 1 1 1 }
+	children Wall { size 9 0.1 12.4 color 0.523 0.556 0.588 }
 }
 Transform {
 	translation	-5.6 19.5 -5.85
-	children Wall { size 9 0.05 12.4 color 1 1 1 }
+	children Wall { size 9 0.1 12.4 color 0.523 0.556 0.588 }
 }
 Transform {
 	translation	0 19.5 -6.8
-	children Wall { size 3 0.05 10.5 color 1 1 1 }
+	children Wall { size 3 0.1 10.5 color 0.523 0.556 0.588 }
 }

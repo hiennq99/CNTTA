@@ -9,8 +9,8 @@ Transform {
 	children [
 		Shape {
 			appearance Appearance {
-				material Material {
-					diffuseColor .612 .506 .275
+				texture	ImageTexture {
+					url	"../../images/wall-3.png"
 				}
 			}
 			geometry Extrusion {
@@ -34,6 +34,39 @@ Transform {
 				]
 				spine [0 0 0, 0 0.4 0]
 				scale [1 1]
+				solid FALSE
+				endCap TRUE
+				beginCap TRUE
+				creaseAngle	1
+			}
+		}
+		Shape {
+			appearance Appearance {
+				material Material {
+					diffuseColor 1 1 1
+				}
+			}
+			geometry Extrusion {
+				crossSection [
+					1.30 0,
+					1.25 0.1658,
+					1.20 0.2236,
+					1.15 0.2598,
+					1.10 0.2828,
+					1.05 0.2958,
+					1.00 0.3,
+				    0.00 0.3,
+					-1.00 0.3,
+					-1.05 0.2958,
+					-1.10 0.2828,
+					-1.15 0.2598, 
+					-1.20 0.2236,
+					-1.25 0.1658,
+					-1.30 0,
+					1.30 0
+				]
+				spine [0 -0.001 0, 0 0 0]
+				scale [0.98 0.98]
 				solid FALSE
 				endCap TRUE
 				beginCap TRUE

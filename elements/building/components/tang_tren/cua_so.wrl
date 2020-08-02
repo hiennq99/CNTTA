@@ -1,0 +1,107 @@
+#VRML V2.0 utf8
+#Cửa sổ
+EXTERNPROTO	Wall-1 [field SFVec3f size] "../../_proto.wrl#Wall-1"
+EXTERNPROTO	Wall-2 [field SFVec3f size] "../../_proto.wrl#Wall-2"
+EXTERNPROTO	Wall-3 [field SFVec3f size] "../../_proto.wrl#Wall-3"
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size, field SFFloat trans] "../../_proto.wrl#Wall"
+
+DEF	VienCuaSo Group	{
+	children [
+		#Viền ngang trên
+		DEF VienNgang Transform {
+			translation 2.8 2.35 0.2
+			children Wall { size 1.4 0.1 0.1 color 0.523 0.556 0.588 }
+		}
+		Transform {
+			translation 0 -1.4 0
+			children USE VienNgang
+		}
+		#Viền ngang trong
+		DEF VienNgangTrong Transform {
+			translation 2.8 2.3 0.15
+			children Wall { size 1.4 0.1 0.1 color 1 1 1 }
+		}
+		Transform {
+			translation 0 -1.3 0
+			children USE VienNgangTrong
+		}
+		Transform {
+			translation 0 -0.3 0
+			children USE VienNgangTrong
+		}
+		#Viền dọc
+		DEF VienDoc Transform {
+			translation 2.15 1.7 0.2
+			children Wall { size 0.1 1.4 0.1 color 0.523 0.556 0.588 }
+		}
+		Transform {
+			translation 1.3 0 0
+			children USE VienDoc
+		}
+		#Viền dọc trong
+		DEF VienDocTrong Transform {
+			translation 2.2 1.7 0.15
+			children Wall { size 0.1 1.4 0.1 color 1 1 1 }
+		}
+		Transform {
+			translation 1.2 0 0
+			children USE VienDocTrong
+		}
+		#Dọc nhỏ
+		Transform {
+			translation	2.8 2.12 0.15
+			children Wall { size 0.05 0.3 0.1 color 1 1 1}
+		}
+	]
+}
+#Cánh cửa sổ bên trái
+DEF CanhCuaTrai Transform {
+	translation	2.3 1.5 0.1
+	children [
+		Transform {
+			translation	0.25 0 0
+			children Wall { size 0.5 1 0.05 trans 0.5 }
+		}
+		Transform {
+			translation	0.5 0 0
+			children Wall { size 0.05 1 0.05 color 1 1 1 }
+		}
+		Transform {
+			translation	0 0 0
+			children Wall { size 0.05 1 0.05 color 1 1 1 }
+		}
+		DEF	actionKeoCuaTrai PlaneSensor {
+			enabled	TRUE
+			autoOffset TRUE
+			offset 2.3 1.5 0.1
+			maxPosition	2.8 1.5
+			minPosition	2.3 1.5
+		}
+	]
+}
+DEF CanhCuaPhai Transform {
+	translation	3.3 1.5 0.12
+	children [
+		Transform {
+			translation	-0.25 0 0
+			children Wall { size 0.5 1 0.05 trans 0.5 }
+		}
+		Transform {
+			translation	-0.5 0 0
+			children Wall { size 0.05 1 0.05 color 1 1 1 }
+		}
+		Transform {
+			translation	0 0 0
+			children Wall { size 0.05 1 0.05 color 1 1 1 }
+		}
+		DEF	actionKeoCuaPhai PlaneSensor {
+			enabled	TRUE
+			autoOffset TRUE
+			offset 3.3 1.5 0.12
+			maxPosition	3.3 1.5
+			minPosition	2.8 1.5
+		}
+	]
+}
+ROUTE actionKeoCuaTrai.translation_changed TO CanhCuaTrai.translation
+ROUTE actionKeoCuaPhai.translation_changed TO CanhCuaPhai.translation
