@@ -191,6 +191,11 @@ Group {
 			scale .2 .2 .2
 			children [Inline { url "elements/Tu/tu.wrl"}]
 		}
+		Transform {
+			translation	-3 1 -11.3
+			scale .2 .2 .2
+			children [Inline { url "elements/Tu/tu.wrl"}]
+		}
 		#kinhchan
 		Transform {
 			translation	-7.4 0.45 -4.7
