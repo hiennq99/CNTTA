@@ -86,7 +86,39 @@ Group {
 			scale 1 1 1
 			children [Inline { url "elements/banghe/ban.wrl"}]
 		}
-		
+		#quattran
+		Transform {
+			translation	7 3 -8.5
+			scale 0.15 0.15 0.15 
+			children [Inline { url "elements/quattran/quattran.wrl"}]
+		}
+		Transform {
+			translation	7 3 -2.7
+			scale 0.15 0.15 0.15 
+			children [Inline { url "elements/quattran/quattran.wrl"}]
+		}
+		Transform {
+			translation	2 3 -8.5
+			scale 0.15 0.15 0.15 
+			children [Inline { url "elements/quattran/quattran.wrl"}]
+		}
+		Transform {
+			translation	2 3 -2.7
+			scale 0.15 0.15 0.15 
+			children [Inline { url "elements/quattran/quattran.wrl"}]
+		}
+		Transform {
+			translation	-3 3 -8.5
+			scale 0.15 0.15 0.15 
+			children [Inline { url "elements/quattran/quattran.wrl"}]
+		}
+		Transform {
+			translation	-3 3 -2.7
+			scale 0.15 0.15 0.15 
+			children [Inline { url "elements/quattran/quattran.wrl"}]
+		}
+
+
 	]
 }
 
