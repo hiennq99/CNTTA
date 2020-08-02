@@ -1,0 +1,240 @@
+#VRML V2.0 utf8
+
+DEF tu1 Transform {
+	children [
+			Transform {
+		children [
+			Shape {
+				appearance Appearance {material Material {}}
+				geometry Box {size 0.1 9 2.5}
+			}
+		]
+	}
+	Transform {
+		translation	1.45 -4.5 0
+		children [
+			Shape {
+				appearance Appearance {material Material {}
+				texture  ImageTexture {url "golim.jpg"}}
+				geometry Box {size 3 0.1 2.5}
+			}
+		]
+	}
+	Transform {
+		translation	2.9 0 0
+		children [
+			Shape {
+				appearance Appearance {material Material {}}
+				geometry Box {size 0.1 9 2.5}
+			}
+		]
+	}
+	Transform {
+		translation	1.45 0 -1.2
+		rotation 0 1 0 1.57
+		children [
+			Shape {
+				appearance Appearance {material Material {}}
+				geometry Box {size 0.1 9 2.9}
+			}
+		]
+	}
+	Transform {
+		translation	1.45 4.5 0
+		children [
+			Shape {
+				appearance Appearance {material Material {}
+				texture  ImageTexture {url "golim.jpg"}}
+				geometry Box {size 3 0.1 2.5}
+			}
+		]
+	}
+	Transform {
+		translation	1.45 -1.1 0
+		children [
+			Shape {
+				appearance Appearance {material Material {}}
+				geometry Box {size 3 0.1 2.5}
+			}
+		]
+	}
+	Transform {
+		translation	1.45 2.4 0
+		children [
+			Shape {
+				appearance Appearance {material Material {}}
+				geometry Box {size 3 0.1 2.5}
+			}
+		]
+	}
+	]
+}
+
+#----------------------------------------------------------------------
+DEF tu2 Transform {
+	children [
+		#ria1----------------------------------------------
+			Transform {
+		translation	3 -2.85 0
+		children [
+			Shape {
+				appearance Appearance {material Material {
+					diffuseColor 0 0 0
+					specularColor .29 .3 .29
+					ambientIntensity 0
+					shininess .08
+				}}
+				geometry Box {size 0.1 3.4 2.5}
+			}
+		]
+	}
+	#ria2---------------------------------------------------
+	Transform {
+		translation	4.4  -1.1 0
+		children [
+			Shape {
+				appearance Appearance {material Material {
+					diffuseColor 0 0 0
+					specularColor .29 .3 .29
+					ambientIntensity 0
+					shininess .08
+				}}
+				geometry Box {size 2.9 0.1 2.5}
+			}
+		]
+	}
+	#tu-----------------------------------------------------
+	Transform {
+		translation	4.4 -2.85 0
+		children [
+			Shape {
+				appearance Appearance {material Material {}
+					texture  ImageTexture {url "golim.jpg"}}
+				geometry Box {size 2.7 3.4 2.5}
+			}
+		]
+	}
+	#tayNam--------------------------------------------------
+	Transform {
+		translation	4.4 -2 1.3
+		children [
+			Shape {
+				appearance Appearance {material Material {
+					diffuseColor .61 .61 .61
+					specularColor .77 .76 .76
+					ambientIntensity .14
+					shininess .9
+				}}
+				geometry Box {size 1.8 0.1 0.15}
+			}
+		]
+	}
+	#ria1--------------------------------------------------------
+	Transform {
+		translation	5.8 -2.85 0
+		children [
+			Shape {
+				appearance Appearance {material Material {
+					diffuseColor 0 0 0
+					specularColor .29 .3 .29
+					ambientIntensity 0
+					shininess .08
+				}}
+				geometry Box {size 0.1 3.4 2.5}
+			}
+		]
+	}
+	#ria2---------------------------------------------------
+	Transform {
+		translation	7.2  -1.1 0
+		children [
+			Shape {
+				appearance Appearance {material Material {
+					diffuseColor 0 0 0
+					specularColor .29 .3 .29
+					ambientIntensity 0
+					shininess .08
+				}}
+				geometry Box {size 2.9 0.1 2.5}
+			}
+		]
+	}
+	#tu---------------------------------------------------------
+	Transform {
+		translation	7.2 -2.85 0
+		children [
+			Shape {
+				appearance Appearance {material Material {}
+				texture  ImageTexture {url "golim.jpg"}}
+				geometry Box {size 2.7 3.4 2.5}
+			}
+		]
+	}
+	#taynam----------------------------------------------------
+	Transform {
+		translation	7.2 -2 1.3
+		children [
+			Shape {
+				appearance Appearance {material Material {
+					diffuseColor .61 .61 .61
+					specularColor .77 .76 .76
+					ambientIntensity .14
+					shininess .9
+				}}
+				geometry Box {size 1.8 0.1 0.15}
+			}
+		]
+	}
+	#ria1------------------------------------------------------
+	Transform {
+		translation	8.6 -2.85 0
+		children [
+			Shape {
+				appearance Appearance {material Material {
+					diffuseColor 0 0 0
+					specularColor .29 .3 .29
+					ambientIntensity 0
+					shininess .08
+				}}
+				geometry Box {size 0.1 3.4 2.5}
+			}
+		]
+	}
+
+	]
+}
+Transform {
+	translation	5.6 0 0
+	children USE tu2
+}
+Transform {
+	translation	5.6 3.5 0
+	children USE tu2
+}
+Transform {
+	translation	0 3.5 0
+	children USE tu2
+}
+Transform {
+	translation	14.3 0 0
+	children USE tu1
+}
+Transform {
+		translation	8  4.5 0
+		children [
+			Shape {
+				appearance Appearance {material Material {}
+				texture  ImageTexture {url "golim.jpg"}}
+				geometry Box {size 14.3 0.1 2.5}
+			}
+		]
+	}
+Transform {
+		translation	8.6  3.45 0
+		children [
+			Shape {
+				appearance Appearance {material Material {}}
+				geometry Box {size 0.1 2.1 2.5}
+			}
+		]
+	}

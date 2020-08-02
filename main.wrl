@@ -117,8 +117,11 @@ Group {
 			scale 0.15 0.15 0.15 
 			children [Inline { url "elements/quattran/quattran.wrl"}]
 		}
-
-
+		Transform {
+			translation	3 1 -9.5
+			scale .2 .2 .2
+			children [Inline { url "elements/Tu/tu.wrl"}]
+		}
 	]
 }
 
