@@ -7,9 +7,9 @@ EXTERNPROTO	Wall [field SFColor color, field SFVec3f size, field SFFloat trans] 
 
 Transform {
 	translation	0 3.95 -5.85
-	children Wall { size 20.2 0.1 12.2 color 1 1 1 }
+	children Wall { size 20.2 0.1 12.2 color 0.523 0.556 0.588 }
 }
 Transform {
 	translation	0 3.75 -5.85
-	children Wall { size 20.4 0.1 12.4 color 1 1 1 }
+	children Wall { size 20.4 0.1 12.4 color 0.523 0.556 0.588 }
 }

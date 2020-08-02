@@ -1,0 +1,163 @@
+#VRML V2.0 utf8
+
+# Ban
+Transform {
+	children [
+		# Gia
+		Transform {
+			children [
+		DEF	Gia
+		Transform {
+			translation	0 0 0
+			children [Shape {
+				geometry Box { size	0.35 0.007 0.35
+				}
+				appearance Appearance
+				{
+					texture	ImageTexture {
+					url	["images\matban.jpg"]
+				}
+				}
+			}]
+		}
+		Transform { 
+			translation	0.16 0.007 0
+			scale 0.1 1 1
+			children [
+				 USE Gia
+			]
+		}
+		Transform { 
+			translation	0 0.007 -0.16
+			scale 0.1 1 1
+			rotation 0 1 0 1.57
+			children [
+				 USE Gia
+			]
+		}
+		Transform { 
+			translation	-0.16 0.007 0
+			scale 0.1 1 1
+			children [
+				 USE Gia
+			]
+		}
+		Transform { 
+			translation	0 0.007 0.16
+			rotation 0 1 0 -1.57
+			scale 0.1 1 1
+			children [
+				 USE Gia
+			]
+		}
+			]
+		}
+		#Chan ban
+		Transform {
+			children	[
+			  Transform	{
+				  translation 0 0 0
+				  rotation 0 0 1 0
+				  children [
+					Shape {
+						geometry Cylinder {
+							radius 0.03
+							height 0.7
+						}
+						appearance Appearance {
+							texture	ImageTexture {
+					            url	["images\matban.jpg"]
+				            }
+						}
+					}
+				  ]
+			  }
+		  Transform {
+			  translation 0 -0.35 0
+			  children [
+			  Shape	{
+				  geometry Cone	{
+					  bottomRadius 0.3
+					  height 0.07
+				  }
+				  appearance Appearance {
+					  material Material {
+						  diffuseColor .608 .663 .612
+						  specularColor .77 .76 .76
+						  ambientIntensity .14
+						  shininess .9
+					  }
+				  }
+			  }
+			  ]
+		  }
+		  ]
+		}
+		#Mat ban
+		Transform {
+			translation	0 0.35 0
+			children [
+			Shape {
+				geometry Cylinder{
+					radius 1
+					height 0.005
+				}
+				appearance Appearance {
+					texture	ImageTexture {
+					url	["images\matban.jpg"]
+				}
+				}
+			}
+			]
+		}
+	]
+}
+
+
+#Ghế
+DEF ghe Transform {
+	translation	.8 .15 0
+	children [
+		Inline {
+			url	["ghe.wrl"]
+		}
+	]
+}
+DEF ghe1 Transform {
+	translation	-.8 .15 0
+	rotation 0 1 0 3.14
+	children [
+		Inline {
+			url	["ghe.wrl"]
+		}
+	]
+}
+DEF ghe2 Transform {
+	translation	0 .15 -.8
+	rotation 0 1 0 1.57
+	children [
+		Inline {
+			url	["ghe.wrl"]
+		}
+	]
+}
+DEF ghe3 Transform {
+	translation	0 .15 .8
+	rotation 0 1 0 -1.57
+	children [
+		Inline {
+			url	["ghe.wrl"]
+		}
+	]
+}
+
+DEF ps PlaneSensor {
+	offset .8 0 0
+	autoOffset FALSE
+	minPosition .8 0	
+	maxPosition 1.2  0
+}
+ROUTE ps.translation_changed TO ghe.set_translation
+
+
+

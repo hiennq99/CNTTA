@@ -1,6 +1,6 @@
 #VRML V2.0 utf8
 
-EXTERNPROTO	Wall-1 [field SFVec3f size ] "_proto.wrl#Wall-1"
+EXTERNPROTO	Wall [field SFVec3f size, field SFColor color] "_proto.wrl#Wall"
 Viewpoint {
 	position 0 10 40
 }
@@ -39,6 +39,38 @@ DEF	TOA_NHA Group {
 		Transform {
 			translation	0 0 0 
 			children Inline	{ url "components/tang_thuong/_index.wrl" }
+		}
+		#Biển số nhà
+		Transform {
+			translation	-2.8 10.2 0.2
+			children [
+				Wall { size 1 0.5 0.01 color 1 1 1 }
+				Transform {
+					translation	0 -0.15 0.01
+					children [
+						Shape {
+							appearance Appearance {
+								material Material {
+									diffuseColor 0.172 0.2 0.411
+								}
+							}
+							geometry Text {
+								string ["CT6-B"]
+								fontStyle FontStyle	{
+									family "Open Sans"
+									topToBottom	TRUE
+									size 0.6
+									justify	"MIDDLE"
+									spacing	1
+									style "BOLD"
+								}
+								length [1]
+								maxExtent 10
+							}
+						}
+					]
+				}
+			]
 		}
 	]	
 }

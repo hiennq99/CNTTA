@@ -5,6 +5,7 @@ PROTO Wall-1 [field SFVec3f size 1 1 1] {
 		appearance Appearance {
 			texture	ImageTexture {
 				url	"../../images/wall-1.png"
+				repeatS	TRUE
 			}
 		}
 		geometry Box {
@@ -17,7 +18,9 @@ PROTO Wall-2 [field SFVec3f size 1 1 1] {
 	Shape {
 		appearance Appearance {
 			texture	ImageTexture {
-				url	"../../images/wall-2.png"
+				url	"../../images/wall-go.jpg"
+				repeatS	TRUE
+				repeatT	TRUE
 			}
 		}
 		geometry Box {
