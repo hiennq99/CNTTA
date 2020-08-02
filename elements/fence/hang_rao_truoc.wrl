@@ -205,11 +205,19 @@ Transform {
 	children [USE hang_rao ]
 }
 Transform {
-	translation	0 0 22
+	translation	6 0 22
 	children [USE hang_rao ]
 }
 Transform {
-	translation	1 0 22
+	translation	8 0 22
+	children [USE hang_rao ]
+}
+Transform {
+	translation	7 0 22
+	children [USE hang_rao ]
+}
+Transform {
+	translation	5 0 22
 	children [USE hang_rao ]
 }
 

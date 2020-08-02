@@ -41,11 +41,11 @@ Transform {
 }
 Transform {
 	scale 0.1 0.1 0.1
-	translation	9 0 22
+	translation	 5 0 22
 	children [Inline {url  "cot_hang_rao.wrl"}]
 }
 Transform {
 	scale 0.1 0.1 0.1
-	translation	2 0 22
+	translation	0 0 22
 	children [Inline {url  "cot_hang_rao.wrl"}]
 }

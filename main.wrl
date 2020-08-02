@@ -25,24 +25,24 @@ Viewpoint {
 
 Group {
 	children [
-#		Inline { url "elements/building/index.wrl" }
-#		Transform {
-#			translation	0 -0.5 -18
-#			children Inline	{ url "elements/SugarDaddy/main.wrl" } 
-#		}
-#		Transform {	 
-#			translation	0 1.65 15
-#			children [Inline 
-#				{url "elements/People/person1.wrl"}
-#			]
-#		}
+		Inline { url "elements/building/index.wrl" }
+		Transform {
+			translation	0 -0.5 -18
+			children Inline	{ url "elements/SugarDaddy/main.wrl" } 
+		}
+		Transform {	 
+			translation	0 1.65 15
+			children [Inline 
+				{url "elements/People/person1.wrl"}
+			]
+		}
 		Transform {
 			scale 1.06 3.3 1.15
 			translation	0 0.95 -14
 			children [Inline {url "elements/fence/hang_rao_hoan_chinh.wrl"}]
 		}
 		Transform {
-			translation	3.1 -0.48 10.4
+			translation	-4 -0.48 10.34
 			scale 0.9 1 0.9
 			children [ Inline { url	"elements/fence/bot_bao_ve.wrl"}]
 		}
