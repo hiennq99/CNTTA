@@ -1,0 +1,127 @@
+#VRML V2.0 utf8
+
+Transform {
+	scale 3 3 3
+	children [
+		#mat ghe
+		Transform {
+			children [
+				Shape {
+					geometry Box {
+						size 0.3 0.01 0.3
+					}
+					appearance Appearance {
+						texture	ImageTexture {
+							url	"images/go1.png"
+						}
+					}
+				}
+			]
+		}
+
+		#Quanh mat ghe
+		Transform {
+			translation	0 -0.02 0.13
+			children [
+				DEF	 BQ	Transform {
+					children [
+						Shape {
+							geometry Box {
+								size 0.27 0.03 0.01
+							}
+							appearance DEF wood-bar Appearance {
+								texture	ImageTexture {
+									url	"images/go1.png"
+								}
+							}
+						}
+					]
+				}
+			]
+		}
+		Transform {
+			translation	0 -0.02 -0.13
+			children [
+				USE	BQ
+			]
+		}
+
+		Transform {
+			translation	0.13 -0.02 0
+			rotation 0 1 0 1.57
+			children [
+				USE	BQ
+			]
+		}
+		Transform {
+			translation	-0.13 -0.02 0
+			rotation 0 1 0 1.57
+			children [
+				USE	BQ
+			]
+		}
+
+		#Chan ghe
+
+		Transform {
+			translation	 -0.13 0 -0.13
+			children [
+				DEF	CG	Transform {
+					children [
+						Shape {
+							geometry Box {size 0.02 0.8 0.02}
+		   					appearance USE wood-bar
+						}
+					]
+				}
+			]
+		}
+
+		Transform {
+			translation 0.13 0 -0.13
+			children [
+				USE	CG
+			]
+		}
+		Transform {
+			translation 0.13 -0.2 0.13
+			scale 1 0.5 1
+			children [
+				USE	CG
+			]
+		}
+		Transform {
+			translation -0.13 -0.2 0.13
+			scale 1 0.5 1
+			children [
+				USE	CG
+			]
+		}
+
+
+		Transform {
+			translation	0 0.36 -0.13
+			children [
+				Shape {
+					geometry Box {size 0.27 0.1 0.021}
+					appearance USE wood-bar
+		
+				}
+			]
+		}
+
+		Transform {
+			translation	0 0.2 -0.13
+			children [
+				Shape {
+					geometry Box {
+						size 0.075 0.4 0.02
+					}
+		  			appearance USE wood-bar
+			
+				}
+			]
+		}
+
+	]
+}
