@@ -82,7 +82,7 @@ Group {
 			children [Inline { url "elements/fence/caytrenhe.wrl"}]
 		}
 		Transform {
-			translation	7 0.3 -7
+			translation	7 0.5 -7
 			scale 1 1 1
 			children [Inline { url "elements/banghe/ban.wrl"}]
 		}
