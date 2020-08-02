@@ -25,17 +25,17 @@ Viewpoint {
 
 Group {
 	children [
-		Inline { url "elements/building/index.wrl" }
-		Transform {
-			translation	0 -0.5 -18
-			children Inline	{ url "elements/SugarDaddy/main.wrl" } 
-		}
-		Transform {	 
-			translation	0 1.65 15
-			children [Inline 
-				{url "elements/People/person1.wrl"}
-			]
-		}
+#		Inline { url "elements/building/index.wrl" }
+#		Transform {
+#			translation	0 -0.5 -18
+#			children Inline	{ url "elements/SugarDaddy/main.wrl" } 
+#		}
+#		Transform {	 
+#			translation	0 1.65 15
+#			children [Inline 
+#				{url "elements/People/person1.wrl"}
+#			]
+#		}
 		Transform {
 			scale 1.06 3.3 1.15
 			translation	0 0.95 -14
@@ -226,31 +226,31 @@ Group {
 		#nguoingoighe
 		Transform {
 			translation	-8.3 0.75 -1
-			scale 0.2 0.2 0.2
+			scale 0.4 0.4 0.4
 			rotation 0 1 0 1.57
 			children [Inline {url "elements/nguoingoi/nguoingoi.wrl"}]
 		}
 		Transform {
 			translation	-8.3 0.75 -2.8
-			scale 0.2 0.2 0.2
+			scale 0.4 0.4 0.4
 			rotation 0 1 0 1.57
 			children [Inline {url "elements/nguoingoi/nguoingoi.wrl"}]
 		}
 		Transform {
 			translation	-8.3 0.75 -4.6
-			scale 0.2 0.2 0.2
+			scale 0.4 0.4 0.4
 			rotation 0 1 0 1.57
 			children [Inline {url "elements/nguoingoi/nguoingoi.wrl"}]
 		}
 		Transform {
 			translation	-8.3 0.75 -6.4
-			scale 0.2 0.2 0.2
+			scale 0.4 0.4 0.4
 			rotation 0 1 0 1.57
 			children [Inline {url "elements/nguoingoi/nguoingoi.wrl"}]
 		}
 		Transform {
 			translation	-8.3 0.75 -8.2
-			scale 0.2 0.2 0.2
+			scale 0.4 0.4 0.4
 			rotation 0 1 0 1.57
 			children [Inline {url "elements/nguoingoi/nguoingoi.wrl"}]
 		}
