@@ -25,17 +25,17 @@ Viewpoint {
 
 Group {
 	children [
-#		Inline { url "elements/building/index.wrl" }
-#		Transform {
-#			translation	0 -0.5 -18
-#			children Inline	{ url "elements/SugarDaddy/main.wrl" } 
-#		}
-#		Transform {	 
-#			translation	0 1.65 15
-#			children [Inline 
-#				{url "elements/People/person1.wrl"}
-#			]
-#		}
+		Inline { url "elements/building/index.wrl" }
+		Transform {
+			translation	0 -0.5 -18
+			children Inline	{ url "elements/SugarDaddy/main.wrl" } 
+		}
+		Transform {	 
+			translation	0 1.65 15
+			children [Inline 
+				{url "elements/People/person1.wrl"}
+			]
+		}
 		Transform {
 			scale 1.06 3.3 1.15
 			translation	0 0.95 -14
@@ -147,6 +147,43 @@ Group {
 			translation	-3 3 -2.7
 			scale 0.15 0.15 0.15 
 			children [Inline { url "elements/quattran/quattran.wrl"}]
+		}
+		#bongden
+		Transform {
+			translation	4.5 3.5 -8.5
+			scale .4 .2 .2
+			rotation 0 1 0 3.14
+			children [Inline {url "elements/bongden/bongden.wrl"}]
+		}
+		Transform {
+			translation	4.5 3.5 -2.7
+			scale .4 .2 .2
+			rotation 0 1 0 3.14
+			children [Inline {url "elements/bongden/bongden.wrl"}]
+		}
+		Transform {
+			translation	-.5 3.5 -8.5
+			scale .4 .2 .2
+			rotation 0 1 0 3.14
+			children [Inline {url "elements/bongden/bongden.wrl"}]
+		}
+		Transform {
+			translation	-.5 3.5 -2.7
+			scale .4 .2 .2
+			rotation 0 1 0 3.14
+			children [Inline {url "elements/bongden/bongden.wrl"}]
+		}
+		Transform {
+			translation	-5.5 3.5 -8.5
+			scale .4 .2 .2
+			rotation 0 1 0 3.14
+			children [Inline {url "elements/bongden/bongden.wrl"}]
+		}
+		Transform {
+			translation	-5.5 3.5 -2.7
+			scale .4 .2 .2
+			rotation 0 1 0 3.14
+			children [Inline {url "elements/bongden/bongden.wrl"}]
 		}
 		#tu
 		Transform {
