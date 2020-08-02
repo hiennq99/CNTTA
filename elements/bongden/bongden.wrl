@@ -1,0 +1,139 @@
+#VRML V2.0 utf8
+
+Transform {
+	rotation	1 0 0 -1.57
+	translation	2.4 -0.2 0.2
+	children DEF tu Shape {
+		geometry Extrusion {
+			crossSection [1 0 , 0.94 -0.355,0.71 -0.71,0.355 -0.94, 0 -1,-0.355 -0.94 ,-0.71 -0.71,	 -0.94 -0.355 , -1 0,-1 1,1 1,1 0]
+			spine [0 0 0, 0.1 0 0]
+			scale [0.2 0.2,0.2 0.2]
+		}
+		appearance DEF Gray Appearance {
+			material Material {
+				diffuseColor 0.8 1 1
+			}
+		}
+	}
+}
+Shape {
+	appearance USE Gray
+	geometry Box {size 5 0.2 0.8}
+}
+
+Transform {
+	rotation 1 0 0 -1.57
+	translation	-2.5 -0.2 0.2
+	children USE tu
+}
+Transform {
+	rotation 1 0 0 -1.57
+	translation	-2.5 -0.2 -0.2
+	children USE tu
+}
+Transform {
+	rotation 1 0 0 -1.57
+	translation	2.4 -0.2 -0.2
+	children USE tu
+}
+
+
+Transform {
+	translation	0 -0.25 0.15
+	rotation 0 0 1 1.57
+	children DEF tube Shape {
+		geometry Cylinder {
+			height 4.8
+			radius 0.08
+		}
+		appearance Appearance {
+			material DEF LED Material {
+				diffuseColor 0.9 0.9 1
+			}
+		}
+	}
+}
+Transform {
+	translation	0 -0.25 -0.15
+	rotation 0 0 1 1.57
+	children USE tube
+}
+Transform {
+	children DEF light PointLight	{
+		on FALSE 
+		intensity 0.1
+		color 1 0.7 1 
+		location 0 -2 0 
+		attenuation 1 0 0 
+		radius 20 
+	}
+}
+
+
+
+
+DEF	touchLight TouchSensor {}
+DEF	time1 TimeSensor	{
+	cycleInterval 0.1
+	enabled	FALSE
+}
+DEF	time2 TimeSensor {
+	cycleInterval 0.1
+	enabled	FALSE
+}
+DEF	time3 TimeSensor {
+	cycleInterval 1
+	enabled	FALSE
+	loop TRUE
+}
+
+DEF	controlLight Script {
+	eventIn	SFBool turn
+	eventOut SFBool	on
+	eventOut SFBool	off
+	field SFBool x TRUE
+	url	"javascript:
+	function turn(val){
+		if(val){
+			if(x){
+				on = true;
+				off = false;
+			}else{
+				on = false;
+				off = true;
+			}
+			x=!x;
+		}
+	}
+	"
+}
+
+DEF	oInter1 OrientationInterpolator	{
+	key	[0 1]
+	keyValue [1 0 0 0.2,1 0 0 -0.2]
+}
+DEF	oInter2 OrientationInterpolator	{
+	key	[0 1]
+	keyValue [1 0 0 -0.2,1 0 0 0.2]
+}
+DEF	cInter1 ColorInterpolator	{
+	key [0 1]
+	keyValue [1 1 1, 1 0.98 0.79]
+} 
+DEF	cInter2 ColorInterpolator	{
+	key [0 1]
+	keyValue [1 0.98 0.79, 1 1 1]
+}
+ROUTE touchLight.isActive TO	controlLight.turn
+ROUTE controlLight.on TO	 light.on
+ROUTE controlLight.on TO	time1.enabled
+ROUTE controlLight.off TO time2.enabled
+ROUTE time1.fraction_changed TO	cInter1.set_fraction
+ROUTE time2.fraction_changed TO	cInter2.set_fraction
+ROUTE cInter1.value_changed TO LED.diffuseColor
+ROUTE cInter2.value_changed TO LED.diffuseColor
+ROUTE touchLight.touchTime TO time1.startTime
+ROUTE touchLight.touchTime TO time2.startTime
+ROUTE time1.fraction_changed TO	oInter1.set_fraction
+ROUTE time2.fraction_changed TO	oInter2.set_fraction
+

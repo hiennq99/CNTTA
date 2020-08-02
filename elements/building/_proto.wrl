@@ -33,7 +33,24 @@ PROTO Wall-3 [field SFVec3f size 1 1 1] {
 	Shape {
 		appearance Appearance {
 			texture	ImageTexture {
-				url	"../../images/wall-3.png"
+				url	"../../images/gach.jpg"
+				repeatS	TRUE
+				repeatT	TRUE
+			}
+		}
+		geometry Box {
+			size IS	size
+		}
+	}
+}
+#Màu tường loại 4
+PROTO Wall-4 [field SFVec3f size 1 1 1] {
+	Shape {
+		appearance Appearance {
+			texture	ImageTexture {
+				url	"../../images/gach-go.jpg"
+				repeatS	TRUE
+				repeatT	TRUE
 			}
 		}
 		geometry Box {

@@ -3,6 +3,7 @@
 EXTERNPROTO	Wall-1 [field SFVec3f size] "../../_proto.wrl#Wall-1"
 EXTERNPROTO	Wall-2 [field SFVec3f size] "../../_proto.wrl#Wall-2"
 EXTERNPROTO	Wall-3 [field SFVec3f size] "../../_proto.wrl#Wall-3"
+EXTERNPROTO	Wall-4 [field SFVec3f size] "../../_proto.wrl#Wall-4"
 EXTERNPROTO	Wall [field SFColor color, field SFVec3f size, field SFFloat trans] "../../_proto.wrl#Wall"
 
 DEF	MatBen Transform {

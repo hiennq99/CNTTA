@@ -9,3 +9,131 @@ Transform {
 	translation	0 -0.5 -5.85
 	children Wall-1 { size 20 1 12 }
 }
+DEF	HangGach Transform {
+	children [
+		DEF Gach Transform {
+			translation	-9.4 0 -11.3
+			children Wall-3 { size 1 0.01 1 }
+		}
+		Transform {
+			translation	1 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	2 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	3 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	4 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	5 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	6 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	7 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	8 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	9 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	10 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	11 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	12 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	13 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	14 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	15 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	16 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	17 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	18 0 0
+			children USE Gach
+		}
+		Transform {
+			translation	18.7 0 0
+			children USE Gach
+		}
+	]
+}
+Transform {
+	translation	0 0 1
+	children USE HangGach
+}
+Transform {
+	translation	0 0 2
+	children USE HangGach
+}
+Transform {
+	translation	0 0 3
+	children USE HangGach
+}
+Transform {
+	translation	0 0 4
+	children USE HangGach
+}
+Transform {
+	translation	0 0 5
+	children USE HangGach
+}
+Transform {
+	translation	0 0 6
+	children USE HangGach
+}
+Transform {
+	translation	0 0 7
+	children USE HangGach
+}
+Transform {
+	translation	0 0 8
+	children USE HangGach
+}
+Transform {
+	translation	0 0 9
+	children USE HangGach
+}
+Transform {
+	translation	0 0 10
+	children USE HangGach
+}
+Transform {
+	translation	0 -0.001 10.7
+	children USE HangGach
+}
