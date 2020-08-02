@@ -1,0 +1,22 @@
+#VRML V2.0 utf8
+#Cửa cổng
+
+Viewpoint {
+	position 0 0 50
+}
+
+DEF DayGhe Transform {
+	children [
+		Transform {
+			children Inline	{ url "chair/day_ghe_ba.wrl" }
+		}
+		Transform {
+			translation	18 0 0
+			children Inline	{ url "chair/day_ghe_hai.wrl" }
+		}
+		Transform {
+			translation	-12.5 0 0
+			children Inline	{ url "chair/day_ghe_hai.wrl" }
+		}
+	]
+}
