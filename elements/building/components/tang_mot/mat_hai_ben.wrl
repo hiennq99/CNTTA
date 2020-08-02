@@ -16,7 +16,7 @@ Transform {
 }
 DEF	SonTuong Transform {
 	translation	9.8 2 -5.85
-	children Wall { size 0.3 4 11.5 color 1 1 1 }
+	children Wall { size 0.3 4 11.5 color 0.596 0.635 0.67 }
 }
 Transform {
 	translation	-19.6 0 0

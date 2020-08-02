@@ -13,5 +13,5 @@ Transform {
 }
 Transform {
 	translation	0 2 -11.6
-	children Wall { size 19.5 4 0.25 color 1 1 1 }
+	children Wall { size 19.5 4 0.25 color 0.596 0.635 0.67 }
 }
