@@ -38,6 +38,19 @@ Group {
 			translation	8 0 0
 			children USE DayGhe
 		}
+		#Quạt
+		Transform {
+			children Inline	{ url "fan/fan_1.wrl" }
+		}
+		Transform {
+			children Inline	{ url "fan/fan_2.wrl" }
+		}
+		Transform {
+			children Inline	{ url "fan/fan_3.wrl" }
+		}
+		Transform {
+			children Inline	{ url "fan/fan_4.wrl" }
+		}
 	]
 }
 

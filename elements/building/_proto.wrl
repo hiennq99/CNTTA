@@ -18,7 +18,7 @@ PROTO Wall-2 [field SFVec3f size 1 1 1] {
 	Shape {
 		appearance Appearance {
 			texture	ImageTexture {
-				url	"../../images/wall-go.jpg"
+				url	"../../images/nen_gach02.png"
 				repeatS	TRUE
 				repeatT	TRUE
 			}
@@ -33,7 +33,7 @@ PROTO Wall-3 [field SFVec3f size 1 1 1] {
 	Shape {
 		appearance Appearance {
 			texture	ImageTexture {
-				url	"../../images/gach.jpg"
+				url	"../../images/nen_gach01.png"
 				repeatS	TRUE
 				repeatT	TRUE
 			}
