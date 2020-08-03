@@ -296,6 +296,11 @@ Group {
 			rotation 0 1 0 1.57
 			children [Inline {url "elements/nguoingoi/nguoingoi.wrl"}]
 		}
+		Transform {
+			translation	0 -0.5 16
+			scale .8 .8 .8
+			children [Inline {url "elements/car/xetaichay.wrl"}]
+		}
 	]
 }
 
