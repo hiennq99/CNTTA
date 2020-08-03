@@ -194,13 +194,36 @@ DEF	nen_nha Transform {
 				}
 				geometry Extrusion {
 					crossSection [1 1,1 -1,-1 -1,-1 1,1 1]
-					spine [0 0 0, 0 1 0]
-					scale [1.2 1.2, 0 0]
+					spine [0 0 0, 0 0.8 0]
+					scale [1.5 1.5, 0 0]
 					creaseAngle	1
 					beginCap TRUE
 					endCap TRUE
 					solid FALSE
 				}
+			}
+		]
+	}
+		DEF	cuachinh Transform {
+		translation	0.425 1.275 -1
+		children [
+			Shape {
+				appearance Appearance {
+					material USE maucua
+				}
+				geometry Box {size 1.05 2.475 0.05}
+			}
+			Transform {
+				translation	0.4 0 -0.05
+				children [
+					Shape {
+						appearance Appearance {
+							material Material {
+							}
+						}
+						geometry Sphere	{radius	0.05}
+					}
+				]
 			}
 		]
 	}
