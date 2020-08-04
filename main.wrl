@@ -20,7 +20,8 @@ NavigationInfo {
 }
 
 Viewpoint {
-	position 0 12 50
+	#position 0 12 50
+	position 0 12 40
 }
 
 Group {
@@ -116,37 +117,6 @@ Group {
 			rotation 0 1 0 -1.57
 			scale .5 .5 .5
 			children [Inline { url "elements/banghe/ghedo.wrl"}]
-		}
-		#quattran
-		Transform {
-			translation	7 3 -8.5
-			scale 0.15 0.15 0.15 
-			children [Inline { url "elements/quattran/quattran.wrl"}]
-		}
-		Transform {
-			translation	7 3 -2.7
-			scale 0.15 0.15 0.15 
-			children [Inline { url "elements/quattran/quattran.wrl"}]
-		}
-		Transform {
-			translation	2 3 -8.5
-			scale 0.15 0.15 0.15 
-			children [Inline { url "elements/quattran/quattran.wrl"}]
-		}
-		Transform {
-			translation	2 3 -2.7
-			scale 0.15 0.15 0.15 
-			children [Inline { url "elements/quattran/quattran.wrl"}]
-		}
-		Transform {
-			translation	-3 3 -8.5
-			scale 0.15 0.15 0.15 
-			children [Inline { url "elements/quattran/quattran.wrl"}]
-		}
-		Transform {
-			translation	-3 3 -2.7
-			scale 0.15 0.15 0.15 
-			children [Inline { url "elements/quattran/quattran.wrl"}]
 		}
 		#bongden
 		Transform {
@@ -300,6 +270,11 @@ Group {
 			translation	0 -0.5 16
 			scale .8 .8 .8
 			children [Inline {url "elements/car/xetaichay.wrl"}]
+		#Cửa cổng
+		Transform {
+			translation	0.3 0.65 11.3
+			scale 0.195 0.2 0.2
+			children Inline { url "elements/gate/_index.wrl" }
 		}
 	]
 }
