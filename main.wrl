@@ -270,6 +270,7 @@ Group {
 			translation	0 -0.5 16
 			scale .8 .8 .8
 			children [Inline {url "elements/car/xetaichay.wrl"}]
+		}
 		#Cửa cổng
 		Transform {
 			translation	0.3 0.65 11.3
