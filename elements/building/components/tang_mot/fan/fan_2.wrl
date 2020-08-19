@@ -1,47 +1,157 @@
 #VRML V2.0 utf8
-#Cái núm điều khiển
-Transform {
+#Quạt trần
+
+Viewpoint {
+	position 0 0 5
+}
+#Công tắc quạt trần
+DEF	CongTac Transform {
 	translation	9.6 2 -4.5
 	scale 0.5 0.5 0.5
 	rotation 0 1 0 -1.5719
 	children [
-		Shape {
+		#Khung công tắc
+		DEF	Khung Shape	{
 			appearance Appearance {
-				material Material {
-					ambientIntensity 0
+				material DEF Mau_1 Material {
+					ambientIntensity .0933
+					diffuseColor .32 .54 .26
 				}
 			}
 			geometry Box {
 				size 0.5 0.8 0.3
 			}
 		}
-		DEF Muc_1 Transform {
-			translation	0 0.1 0.2
+		#Mặt tròn hiển thị
+		DEF	MatTron Transform {
+			translation	0 0 0.11
+			rotation 1 0 0 1.57
+			children Shape {
+				appearance Appearance {
+					material Material {
+						diffuseColor 1 1 1
+					}
+				}
+				geometry Cylinder {
+					height 0.1
+					radius 0.15
+				}
+			}
+		}
+		Transform {
+			translation	0.2 -0.02 0.16
 			children [
 				Shape {
 					appearance Appearance {
 						material Material {
-							diffuseColor 1 1 1
+							diffuseColor 0 0 0
 						}
 					}
-					geometry Box {
-						size 0.3 0.1 0.05
+					geometry Text {
+						string ["0"]
+						fontStyle FontStyle	{
+							family "Open Sans"
+							topToBottom	TRUE
+							size 0.1
+							justify	"MIDDLE"
+							spacing	1
+							style "BOLD"
+						}
+						length [1]
+						maxExtent 10
 					}
 				}
-				DEF	touch_1 TouchSensor	{
-					enabled	TRUE
+			]
+		}
+		Transform {
+			translation	0 0.2 0.16
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0 0 0
+						}
+					}
+					geometry Text {
+						string ["1"]
+						fontStyle FontStyle	{
+							family "Open Sans"
+							topToBottom	TRUE
+							size 0.1
+							justify	"MIDDLE"
+							spacing	1
+							style "BOLD"
+						}
+						length [1]
+						maxExtent 10
+					}
 				}
+			]
+		}
+		Transform {
+			translation	-0.2 -0.02 0.16
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 0 0 0
+						}
+					}
+					geometry Text {
+						string ["2"]
+						fontStyle FontStyle	{
+							family "Open Sans"
+							topToBottom	TRUE
+							size 0.1
+							justify	"MIDDLE"
+							spacing	1
+							style "BOLD"
+						}
+						length [1]
+						maxExtent 10
+					}
+				}
+			]
+		}
+		#Nút vặn
+		DEF	Nut Transform {
+			translation	0 0 0.18
+			children [
+				Shape {
+					appearance Appearance {
+						material USE Mau_1  
+					}
+					geometry Box {
+						size 0.28 0.05 0.05
+					}
+				}
+				Transform {
+					translation	0.11 0 0
+					children Shape {
+						appearance Appearance {
+							material Material {
+								diffuseColor 0 0 0
+							} 
+						}
+						geometry Box {
+							size 0.051 0.051 0.051
+						}
+					}
+				}
+				DEF	Touch_1 TouchSensor	{}
 			]
 		}
 	]
 }
+
+#Quạt
 Transform {
 	translation	5 3.1 -4
 	scale 0.2 0.2 0.2
 	children [
 		DEF	phanquay Transform {
 			children [
-				Transform{
+				Transform {
 					translation	0 0 0
 					scale 1 0.2 1
 					children[
@@ -52,10 +162,10 @@ Transform {
 
 								}
 							} 
-							geometry Sphere {radius 1}
+							geometry Sphere { radius 1 }
 						}
 
-						Transform{
+						Transform {
 							translation 3.6 0 0
 							rotation 0 0 0 0
 				    		children [	
@@ -71,15 +181,14 @@ Transform {
 
 												}
 											}
-											geometry Box {size 5 0.01 1.5}
+											geometry Box { size 5 0.01 1.5 }
 										}
 									]
 								}
 							]
 						}
 	
-						Transform
-						{
+						Transform {
 							translation -2 0 3
 							rotation 0 1 0 1.046666
 				    		children 
@@ -95,8 +204,7 @@ Transform {
 							]
 						}
 				
-						Transform
-						{
+						Transform {
 							translation -2 0 -3
 							rotation 0 1 0 -1.046666
 				    		children 
@@ -121,30 +229,29 @@ Transform {
 										material Material {
 											diffuseColor 0 .25 .24
 										}
-									}geometry Box {size 1.5 0.01 0.5}
+									}
+									geometry Box { size 1.5 0.01 0.5 }
 								}
 							]
 						}
 
-						Transform
-						{
+						Transform {
 							translation	-0.9 0.1 1.1
 							rotation 0 1 0 1.046666
-							children [USE chotquat ]
+							children [ USE chotquat ]
 						}
 
-						Transform
-						{
+						Transform {
 							translation	-0.9 0 -1.1
 							rotation 0 1 0 -1.046666
-							children [USE chotquat ]
+							children [ USE chotquat ]
 						}
 					]
 				}
 			]
 		}
 
-		Transform{
+		Transform {
 			translation	0 0.6 0
 			children[
 				DEF up Shape {
@@ -154,103 +261,189 @@ Transform {
 
 						}
 					}
-					geometry Cone {height 1.2 bottomRadius 0.4}
+					geometry Cone { height 1.2 bottomRadius 0.4 }
 				}
 			]
 		}
 
-		Transform
-		{
+		Transform {
 			translation	0 2 0
 			children
 			[
-				Shape {appearance Appearance {
+				Shape {
+					appearance Appearance {
 						material Material {
 							diffuseColor 0 .25 .24
 
 						}
-					}geometry Cylinder {height 3 radius 0.1}}
+					}
+					geometry Cylinder { height 3 radius 0.1 }
+				}
 			]
 		}
 
-		Transform
-		{
+		Transform {
 			translation	0 3 0
 			rotation 0 0 1 3.14
-			children [USE up]
+			children [ USE up ]
 		}
 	]
 }
-DEF	touch TouchSensor{}
-DEF	timer1 TimeSensor {
-	cycleInterval 0.1
-	loop FALSE
-	enabled	FALSE
-}
-DEF	timer2 TimeSensor {
-	cycleInterval 1
-	loop TRUE
-	enabled	FALSE
-}
-DEF	timer TimeSensor {
-	cycleInterval 0.1
-	loop FALSE
+
+#Time bật lên mức 1
+DEF	time_1 TimeSensor {
+	cycleInterval 0.5
 	enabled	FALSE
 }
 
-DEF	time_1 TimeSensor {
-	cycleInterval 1
-	loop FALSE
+#Time bật lên mức 2
+DEF	time_2 TimeSensor {
+	cycleInterval 0.5
 	enabled	FALSE
 }
-DEF	oInterC1 OrientationInterpolator	{
-	key[0.5 1]
-	keyValue [0 0 1 1.57, 0 0 1 0]
+
+#Time lùi về mức 1
+DEF	time_3 TimeSensor {
+	cycleInterval 0.5
+	enabled	FALSE
 }
-DEF	oInterC OrientationInterpolator {
-	key	[0 1]
-	keyValue [0 0 1 0,0 0 1 1.57]
+
+#Time lùi về mức 0
+DEF	time_4 TimeSensor {
+	cycleInterval 0.5
+	enabled	FALSE
 }
+
+#Time quạt quay mức 1
+DEF	quat_time_1 TimeSensor {
+	cycleInterval 0.7
+	enabled	FALSE
+	loop TRUE
+}
+
+#Time quạt quay mức 2
+DEF	quat_time_2 TimeSensor {
+	cycleInterval 0.3
+	enabled	FALSE
+	loop TRUE
+}
+
+#Time quạt lùi về mức 1
+DEF	quat_time_3 TimeSensor {
+	cycleInterval 0.8
+	enabled	FALSE
+	loop TRUE
+}
+
+#Nút lên mức 1
+DEF	ori_1 OrientationInterpolator {
+	key	[0, 1]
+	keyValue [0 0 0 0, 0 0 1 1.5719]
+}
+
+#Nút lên mức 2
+DEF	ori_2 OrientationInterpolator {
+	key	[0, 1]
+	keyValue [0 0 1 1.5719, 0 0 1 3.1438]
+}
+
+#Nút lùi về mức 1
+DEF	ori_3 OrientationInterpolator {
+	key	[0, 1]
+	keyValue [0 0 1 3.1438, 0 0 1 1.5719]
+}
+
+#Nút lùi về mức 0
+DEF	ori_4 OrientationInterpolator {
+	key	[0, 1]
+	keyValue [0 0 1 1.5719, 0 0 0 0]
+}
+
+#Cánh quạt quay mức 1
 DEF	oInterQ OrientationInterpolator {
 	key	[0 0.5 1]
-	keyValue [0 1 0 0,0 1 0 3.14,0 1 0 6.28]
+	keyValue [0 1 0 0, 0 1 0 3.14, 0 1 0 6.28]
 }
-DEF	action_1 PositionInterpolator {
-	key	[0, 1]
-	keyValue [0 0 0, 0 0.1 0.15]
-}
+
+#Script 
 DEF	control Script {
-	eventIn	SFBool turn
-	eventOut SFBool	on
-	eventOut SFBool	off
-	field SFBool x TRUE
+	eventIn	SFBool turnOn
+	eventOut SFBool	On1
+	eventOut SFBool	On2
+	eventOut SFBool	On3
+	eventOut SFBool	On4
+	eventOut SFBool	toggleFan
+	field SFInt32 count 0
 	url	"javascript:
-	function turn(val){
+	function turnOn(val){
 		if(val){
-			x=!x;
-			if (x){
-				on = true;
-				off = false
-			} else{
-				on = false;
-				off = true;
+			count++
+				if(count == 1) {
+				On1 = TRUE
+					On2 = FALSE
+					On3 = FALSE
+					On4 = FALSE
+			}
+			if(count == 2) {
+				On1 = FALSE
+					On2 = TRUE
+					On3 = FALSE
+					On4 = FALSE
+			}
+			if(count == 3) {
+				On1 = FALSE
+					On2 = FALSE
+					On3 = TRUE
+					On4 = FALSE
+			}
+			if(count == 4) {
+				On1 = FALSE
+					On2 = FALSE
+					On3 = FALSE
+					On4 = TRUE
+					count = 0
+					toggleFan = FALSE
 			}
 		}
 	}
 	"
 }
-ROUTE touch_1.isActive TO control.turn
-ROUTE control.on TO	timer1.enabled
-ROUTE control.on TO	timer2.enabled
-ROUTE control.on TO	time_1.enabled
-ROUTE touch_1.touchTime	TO time_1.startTime
-ROUTE time_1.fraction_changed TO action_1.set_fraction
-ROUTE action_1.value_changed TO	Muc_1.translation
-ROUTE control.off TO timer.enabled
-ROUTE touch_1.touchTime TO timer2.startTime
-ROUTE touch_1.touchTime TO timer.startTime
-ROUTE touch_1.touchTime TO timer1.startTime
-ROUTE timer2.fraction_changed TO oInterQ.set_fraction
-ROUTE oInterQ.value_changed	TO phanquay.rotation
-ROUTE timer1.fraction_changed TO oInterC.set_fraction
-ROUTE timer.fraction_changed TO oInterC1.set_fraction
+
+
+ROUTE Touch_1.isActive TO control.turnOn
+
+ROUTE control.On1 TO time_1.enabled
+ROUTE Touch_1.touchTime	TO time_1.startTime
+ROUTE time_1.fraction_changed TO ori_1.set_fraction
+ROUTE ori_1.value_changed TO Nut.rotation
+#Quạt
+ROUTE control.On1 TO quat_time_1.enabled
+ROUTE quat_time_1.fraction_changed TO oInterQ.set_fraction
+ROUTE oInterQ.value_changed TO phanquay.rotation
+
+ROUTE control.On2 TO time_2.enabled
+ROUTE Touch_1.touchTime	TO time_2.startTime
+ROUTE time_2.fraction_changed TO ori_2.set_fraction
+ROUTE ori_2.value_changed TO Nut.rotation
+#Quạt
+ROUTE control.On2 TO quat_time_2.enabled
+ROUTE quat_time_2.fraction_changed TO oInterQ.set_fraction
+ROUTE oInterQ.value_changed TO phanquay.rotation
+
+ROUTE control.On3 TO time_3.enabled
+ROUTE Touch_1.touchTime	TO time_3.startTime
+ROUTE time_3.fraction_changed TO ori_3.set_fraction
+ROUTE ori_3.value_changed TO Nut.rotation
+#Quạt
+ROUTE control.On3 TO quat_time_3.enabled
+ROUTE quat_time_3.fraction_changed TO oInterQ.set_fraction
+ROUTE oInterQ.value_changed TO phanquay.rotation
+
+ROUTE control.On4 TO time_4.enabled
+ROUTE Touch_1.touchTime	TO time_4.startTime
+ROUTE time_4.fraction_changed TO ori_4.set_fraction
+ROUTE ori_4.value_changed TO Nut.rotation
+#Quạt
+ROUTE control.toggleFan TO quat_time_3.enabled
+
+
