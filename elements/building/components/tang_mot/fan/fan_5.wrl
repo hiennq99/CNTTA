@@ -6,9 +6,9 @@ Viewpoint {
 }
 #Công tắc quạt trần
 DEF	CongTac Transform {
-	translation	9.6 2 -5.5
-	scale 0.5 0.5 0.5
-	rotation 0 1 0 -1.5719
+	#translation	9.6 2 -5.5
+	#scale 0.5 0.5 0.5
+	#rotation 0 1 0 -1.5719
 	children [
 		#Khung công tắc
 		DEF	Khung Shape	{
@@ -146,7 +146,7 @@ DEF	CongTac Transform {
 
 #Quạt
 Transform {
-	translation	-4 3.1 -4
+	translation	5 3.1 -9
 	scale 0.2 0.2 0.2
 	children [
 		DEF	phanquay Transform {

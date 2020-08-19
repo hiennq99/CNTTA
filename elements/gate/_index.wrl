@@ -1,40 +1,44 @@
 #VRML V2.0 utf8
 #Cái cổng
-#Trụ trước
 
 Viewpoint {
 	position 0 0 30
 }
-DEF TruTruoc Transform {
+
+#Trụ trước
+DEF	TruTruoc Transform {
 	children [
-		#Cục trên
-		Shape {
-			appearance Appearance {
-				material DEF Mau_1 Material {
-					ambientIntensity 0
-				}
-			}
-			geometry Box {
-				size 2 6 2
-			}
-		}
-		#Cục dưới
-		Transform {
-			translation	0 -4 0
-			children [
-				Shape {
-					appearance Appearance {
-						material DEF Mau_2 Material {
-							diffuseColor .24 .24 .24
-							specularColor .3 .25 .3
-							ambientIntensity .06
-							shininess .05
-						}
+		#Cục ở trên
+		DEF CucTren Transform {
+			children Shape {
+				appearance Appearance {
+					material DEF Mau_1 Material	{
+						ambientIntensity 0.4
 					}
-					geometry Box {size 2.1 2 2.1}		
 				}
-			]
+				geometry Box {
+					size 2 6 2
+				}
+			}
 		}
+		#Cục ở dưới
+		DEF	CucDuoi Transform {
+			translation	0 -4 0
+			children Shape {
+				appearance Appearance {
+					material DEF Mau_2 Material {
+						diffuseColor .24 .24 .24
+						specularColor .3 .25 .3
+						ambientIntensity .06
+						shininess .05
+					}
+				}
+				geometry Box {
+					size 2.1 2 2.1
+				}
+			}
+		}
+		#Bánh xe
 		DEF	BanhXe Transform {
 			translation	0.5 -5 0
 			children [
@@ -69,48 +73,49 @@ DEF TruTruoc Transform {
 				}
 			]
 		}
-		DEF	touch TouchSensor {}
+		#Định nghĩa sự kiện
+		DEF	Touch_1 TouchSensor {}
 	]
 }
-#Phần thanh kéo
-DEF	PhanThanhRay Transform	{
+#Thanh kéo
+DEF	ThanhKeo Transform {
 	center 25.5 0 0
 	children [
-		DEF	Nhip_1 Transform	{
-			translation 3 -1 0
+		#Thanh kéo nhỏ
+		DEF	ThanhKeoNho Transform {
+			translation	3 -1 0
 			children [
-				DEF ThanhDoc_1 Transform {
-					translation	0 0 .95 
-					children [
-						Shape {
-							geometry Box { size .4 8 .25 }
-							appearance Appearance {
-								material USE Mau_2 				
-							}
+				DEF	ThanhDoc Transform {
+					translation	0 0 0.95
+					children Shape {
+						appearance Appearance {
+							material USE Mau_2
 						}
-					]
+						geometry Box {
+							size 0.4 8 0.25
+						}
+					}
 				}
 				Transform {
-					translation	0 0 -1.95 
-					children USE ThanhDoc_1
+					translation	0 0 -1.95
+					children USE ThanhDoc
 				}
-				DEF ThanhCheo_1 Transform {
-					rotation 0 0 1 .55
-					children [
-						Shape {
-							geometry Box { size .25 8 .25 }
-							appearance Appearance {
-								material USE Mau_1				
-							}
+				DEF	ThanhCheo Transform	{
+					rotation 0 0 1 0.55
+					children Shape {
+						appearance Appearance {
+							material USE Mau_1				
 						}
-					]
+						geometry Box {
+							size 0.25 8 0.25
+						}
+					}
 				}
 				Transform {
 					rotation 0 0 1 -1.1
-					children [
-						USE	ThanhCheo_1
-					]
+					children USE ThanhCheo
 				}
+				#Cục nối giữa 3 thanh
 				Transform {
 					rotation 1 0 0 1.57
 					children [
@@ -119,19 +124,20 @@ DEF	PhanThanhRay Transform	{
 								material USE Mau_2				
 							}
 							geometry Cylinder {
-								radius .125
+								radius 0.125
 								height 1.8
 							}
 						}
 					]
 				}
-				DEF Tron_1 Transform {
+				#Lớp cao su ở đầu thanh
+				DEF ThanhTron Transform {
 					translation	-2.04 3.3 0
 					rotation 1 0 0 1.57
 					children [
 						Shape {
 							appearance Appearance {
-								material USE Mau_2			
+								material USE Mau_1			
 							}
 							geometry Cylinder {
 								radius .2
@@ -142,115 +148,118 @@ DEF	PhanThanhRay Transform	{
 				}
 				Transform {
 					translation	0 -6.6 0
-					children USE Tron_1 
+					children USE ThanhTron 
 				}
 				Transform {
 					translation	4.08 0 0
-					children USE Tron_1
+					children USE ThanhTron
 				}
 				Transform {
 					translation	4.08 -6.6 0
-					children USE Tron_1
+					children USE ThanhTron
 				}
-		
 			]
 		}
-
 		Transform {
 			translation	4.08 0 0
 			children [
-				USE	Nhip_1
+				USE	ThanhKeoNho
 			]
 		}
 		Transform {
 			translation	8.16 0 0
 			children [
-				USE	Nhip_1
+				USE	ThanhKeoNho
 			]
 		}
 		Transform {
 			translation	12.24 0 0
 			children [
-				USE	Nhip_1
+				USE	ThanhKeoNho
 			]
 		}
 		Transform {
 			translation	16.32 0 0
 			children [
-				USE	Nhip_1
+				USE	ThanhKeoNho
 			]
 		}
 		Transform {
 			translation	20.4 0 0
 			children [
-				USE	Nhip_1
+				USE	ThanhKeoNho
 			]
 		}
 	]
 }
-#Bánh xe
 
-#Script
-DEF action Script {
-	eventIn SFBool turnOn
-	eventOut SFBool On
-	eventOut SFBool Off
+#Script 
+DEF	action Script {
+	eventIn	SFBool turnOn
+	eventOut SFBool	on
+	eventOut SFBool	off
 	field SFBool turn FALSE
-	url "javascript:
-	function turnOn(val){
-		if(val){
-			turn = !turn;
+	url	"javascript:
+	function turnOn(val) {
+		if(val) {
+			turn = !turn
 			if(turn) {
-				On = TRUE;
-                Off = FALSE;
-            } else {
-                On = FALSE;
-				Off = TRUE;
-        	}
-        }
-    }
-    "
+				on = TRUE
+				off = FALSE
+			} else {
+				on = FALSE
+				off = TRUE
+			}
+		}
+	}
+	"
 }
-DEF	time TimeSensor	{
+
+#Time TruTruoc di chuyển về bên phải
+DEF	time_1 TimeSensor {
 	cycleInterval 3
-	loop FALSE
 	enabled	FALSE
 }
-DEF	time_1 TimeSensor	{
+#Time TruTruoc di chuyển về bên trái
+DEF	time_2 TimeSensor {
 	cycleInterval 3
-	loop FALSE
 	enabled	FALSE
 }
-DEF	pos PositionInterpolator {
-	key	[0, 1]
-	keyValue [1 1 1, .2 1 1]
-}
+#Vị trí TruTruoc di chuyển về bên phái
 DEF	pos_1 PositionInterpolator {
-	key	[0, 1]
-	keyValue [.2 1 1, 1 1 1]
-}
-DEF	pos_2 PositionInterpolator {
 	key	[0, 1]
 	keyValue [0 0 0, 20 0 0]
 }
-DEF	pos_3 PositionInterpolator {
+#Vị trí TruTruoc di chuyển về bên trái
+DEF	pos_2 PositionInterpolator {
 	key	[0, 1]
 	keyValue [20 0 0, 0 0 0]
 }
+#Vị trí thanh kéo khi di chuyển về bên trái
+DEF	pos_3 PositionInterpolator {
+	key	[0, 1]
+	keyValue [1 1 1, 0.2 1 1]
+}
+#Vị trí thanh kéo khi di chuyển về bên phải
+DEF	pos_4 PositionInterpolator {
+	key	[0, 1]
+	keyValue [0.2 1 1, 1 1 1]
+}
 
-ROUTE touch.isActive TO	action.turnOn
-ROUTE action.On TO time.enabled
-ROUTE touch.touchTime TO time.startTime
-ROUTE time.fraction_changed	TO pos.set_fraction
-ROUTE pos.value_changed	TO PhanThanhRay.scale
+ROUTE Touch_1.isActive TO action.turnOn
 
-ROUTE time.fraction_changed	TO pos_2.set_fraction
-ROUTE pos_2.value_changed TO TruTruoc.translation
-
-ROUTE action.Off TO time_1.enabled
-ROUTE touch.touchTime TO time_1.startTime
+ROUTE action.on	TO time_1.enabled
+ROUTE Touch_1.touchTime	TO time_1.startTime
 ROUTE time_1.fraction_changed TO pos_1.set_fraction
-ROUTE pos_1.value_changed TO PhanThanhRay.scale
+ROUTE pos_1.value_changed TO TruTruoc.translation
 
 ROUTE time_1.fraction_changed TO pos_3.set_fraction
-ROUTE pos_3.value_changed TO TruTruoc.translation
+ROUTE pos_3.value_changed TO ThanhKeo.scale
+
+ROUTE action.off TO	time_2.enabled
+ROUTE Touch_1.touchTime	TO time_2.startTime
+ROUTE time_2.fraction_changed TO pos_2.set_fraction
+ROUTE pos_2.value_changed TO TruTruoc.translation
+
+ROUTE time_2.fraction_changed TO pos_4.set_fraction
+ROUTE pos_4.value_changed TO ThanhKeo.scale
