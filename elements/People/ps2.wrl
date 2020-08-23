@@ -204,10 +204,10 @@ DEF	HandLeft Transform {
 			]
 		}
 		#Cánh tay
-		Transform {
+		DEF khopPhai Transform {
 			translation	0 -1.4 0
 			scale 0.55 1 0.55
-			children Shape {
+			children [Shape {
 				appearance Appearance {
 					material USE MauAo
 				}
@@ -261,20 +261,22 @@ DEF	HandLeft Transform {
 					beginCap TRUE
 					creaseAngle	1
 				}
-			}
-		}
-		#Bàn tay
-		Transform {
-			translation	0 -3.4 0
+			},
+            #ban tay
+            Transform {
+			translation	0 -2.4 0
 			children Shape {
 				appearance Appearance {
 					material USE MauAo
 				}
 				geometry Sphere	{
-					radius 0.3
+					radius 0.5
 				}
 			}
+		}]
 		}
+		#Bàn tay
+		
 	]
 }
 #Tay phải
@@ -357,10 +359,10 @@ DEF	HandRight Transform {
 			]
 		}
 		#Cánh tay
-		Transform {
+		DEF khopTrai Transform {
 			translation	0 -1.4 0
 			scale 0.55 1 0.55
-			children Shape {
+			children [Shape {
 				appearance Appearance {
 					material USE MauAo
 				}
@@ -414,20 +416,23 @@ DEF	HandRight Transform {
 					beginCap TRUE
 					creaseAngle	1
 				}
-			}
-		}
-		#Bàn tay
-		Transform {
-			translation	0 -3.4 0
+			},
+            #ban tay
+            Transform {
+			translation	0 -2.4 0
 			children Shape {
 				appearance Appearance {
 					material USE MauAo
 				}
 				geometry Sphere	{
-					radius 0.3
+					radius 0.5
 				}
 			}
 		}
+            ]
+		}
+		#Bàn tay
+		
 	]
 }
 #Chân trái
@@ -704,7 +709,7 @@ DEF	quay OrientationInterpolator {
 }
 
 ROUTE time.fraction_changed	TO quay.set_fraction
-ROUTE quay.value_changed TO	HandLeft.rotation
+ROUTE quay.value_changed TO	khopTrai.rotation
 DEF	time3 TimeSensor {
 	cycleInterval 5
 	loop TRUE
@@ -714,7 +719,7 @@ DEF	quay3 OrientationInterpolator {
 	keyValue [1 0 0 0, 1 0 0 0.5, 1 0 0 0, 1 0 0 -0.5, 1 0 0 0]
 }
 ROUTE time3.fraction_changed	TO quay3.set_fraction	
-ROUTE quay3.value_changed TO	HandRight.rotation
+ROUTE quay3.value_changed TO	khopPhai.rotation
 
 #bước chân trai
 
