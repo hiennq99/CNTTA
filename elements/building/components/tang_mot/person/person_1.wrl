@@ -14,7 +14,7 @@ DEF	Head Transform {
 		Shape {
 			appearance Appearance {
 				texture	ImageTexture {
-					url	"face1.png"
+					#url	"face1.png"
 				}
 			}
 			geometry Sphere	{
@@ -692,5 +692,55 @@ DEF	FootRight Transform {
 		}
 	]
 }
+DEF	time TimeSensor	{
+	cycleInterval 5
+	loop TRUE
+}
+
+DEF	quay OrientationInterpolator {
+	key	[0, 0.25, 0.5, 0.75, 1.0]
+	keyValue [1 0 0 0, 1 0 0 -0.5, 1 0 0 0, 1 0 0 0.5, 1 0 0 0] 
+}
+
+ROUTE time.fraction_changed	TO quay.set_fraction
+ROUTE quay.value_changed TO	HandLeft.rotation
+DEF	time3 TimeSensor {
+	cycleInterval 5
+	loop TRUE
+}
+DEF	quay3 OrientationInterpolator {
+	key	[0, 0.25, 0.5, 0.75, 1.0]
+	keyValue [1 0 0 0, 1 0 0 0.5, 1 0 0 0, 1 0 0 -0.5, 1 0 0 0]
+}
+ROUTE time3.fraction_changed	TO quay3.set_fraction	
+ROUTE quay3.value_changed TO	HandRight.rotation
+
+#bước chân trai
+
+DEF	time1 TimeSensor	{
+	cycleInterval 5
+	loop TRUE
+}
+
+DEF	quay1 OrientationInterpolator {
+	key	[0, 0.25, 0.5, 0.75, 1.0]
+	keyValue [1 0 0 0, 1 1 0 -.3, 1 0 0 0, 1 1 0 .3, 1 0 0 0] 
+}
+
+ROUTE time1.fraction_changed	TO quay1.set_fraction
+ROUTE quay1.value_changed TO	FootLeft.rotation
+#buoc chan phai
+DEF	time2 TimeSensor	{
+	cycleInterval 5
+	loop TRUE
+}
+
+DEF	quay2 OrientationInterpolator {
+	key	[0, 0.25, 0.5, 0.75, 1.0]
+	keyValue [1 0 0 0, 1 1 0 .3, 1 0 0 0, 1 1 0 -.3, 1 0 0 0] 
+}
+
+ROUTE time2.fraction_changed	TO quay2.set_fraction
+ROUTE quay2.value_changed TO	FootRight.rotation
 
 

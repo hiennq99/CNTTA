@@ -68,7 +68,7 @@ Transform {
 }
 # Cánh cửa
 DEF	CanhCuaTrai Transform {
-	rotation 0 0 0 0
+	rotation 0 1 0 -2
 	translation	-1 0 0.15
 	children [
 		# Cánh cửa
@@ -117,7 +117,7 @@ DEF	CanhCuaTrai Transform {
 		}
 		DEF	actionKeoCuaTrai CylinderSensor	{
 			enabled	TRUE
-			offset 0
+			offset -2
 			autoOffset TRUE
 			maxAngle 0
 			minAngle -2
@@ -125,7 +125,7 @@ DEF	CanhCuaTrai Transform {
 	]
 }
 DEF	CanhCuaPhai Transform {
-	rotation 0 0 0 0
+	rotation 0 1 0 2
 	translation	1 0 0.15
 	children [
 		# Cánh cửa
@@ -174,14 +174,35 @@ DEF	CanhCuaPhai Transform {
 		}
 		DEF	actionKeoCuaPhai CylinderSensor	{
 			enabled	TRUE
-			offset 0
+			offset 2
 			autoOffset TRUE
 			maxAngle 2
 			minAngle 0
 		}
 	]
 }
+DEF	timeCuaMot TimeSensor {
+	loop TRUE
+	cycleInterval 3
+	enabled	TRUE
+}
+DEF	timeCuaHai TimeSensor {
+	loop TRUE
+	cycleInterval 3
+	enabled	TRUE
+}
+DEF	autoOpenLeft OrientationInterpolator {
+	key	[0, 0.5, 1]
+	keyValue [0 1 0 0, 0 1 0 -2, 0 1 0 0]
+}
+DEF	autoOpenRight OrientationInterpolator {
+	key	[0, 0.5, 1]
+	keyValue [0 1 0 0, 0 1 0 2, 0 1 0 0]
+}
 
 ROUTE actionKeoCuaTrai.rotation_changed	TO CanhCuaTrai.rotation
 ROUTE actionKeoCuaPhai.rotation_changed	TO CanhCuaPhai.rotation
-
+#ROUTE timeCuaMot.fraction_changed TO autoOpenLeft.set_fraction
+#ROUTE autoOpenLeft.value_changed TO	CanhCuaTrai.rotation
+#ROUTE timeCuaHai.fraction_changed TO autoOpenRight.set_fraction
+#ROUTE autoOpenRight.value_changed TO CanhCuaPhai.rotation
