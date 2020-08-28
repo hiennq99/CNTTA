@@ -1,0 +1,67 @@
+#VRML V2.0 utf8
+
+DEF Person_1 Transform {
+	scale 0.15 0.15 0.15
+	translation	-0.5 1.8 -2
+	children [
+		Inline { url "person_1.wrl" }
+	]
+}
+DEF	timePerson_1 TimeSensor {
+	loop TRUE
+	cycleInterval 15
+	enabled	TRUE
+}
+DEF	actionPerson_1 PositionInterpolator	{
+	key	[
+		0, 
+		0.2,
+		0.3, 
+		0.4,
+		0.5, 
+		0.7,
+		0.8,
+		0.9, 
+		1
+	]
+	keyValue [
+		-0.5 1.8 -2, 
+		-0.5 1.8 2,
+		-0.5 1.8 2, 
+		0.5 1.8 2,
+		0.5 1.8 2, 
+		0.5 1.8 -2,
+		0.5 1.8 -2, 
+		-0.5 1.8 -2,
+		-0.5 1.8 -2
+	]
+}
+DEF	oriPerson_1 OrientationInterpolator	{
+	key	[
+		0, 
+		0.2,
+		0.3, 
+		0.4,
+		0.5, 
+		0.7,
+		0.8,
+		0.9,
+		1
+	]
+	keyValue [
+		0 1 0 0, 
+		0 1 0 0,
+	    0 1 0 1.57,
+		0 1 0 1.57,
+		0 1 0 3.14, 
+		0 1 0 3.14,
+		0 1 0 4.71, 
+		0 1 0 4.71,
+		0 1 0 6.28
+	]
+}
+
+ROUTE timePerson_1.fraction_changed	TO actionPerson_1.set_fraction
+ROUTE timePerson_1.fraction_changed	TO oriPerson_1.set_fraction
+ROUTE actionPerson_1.value_changed TO Person_1.translation
+ROUTE oriPerson_1.value_changed	TO Person_1.rotation

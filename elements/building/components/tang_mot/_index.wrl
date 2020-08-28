@@ -51,9 +51,6 @@ Group {
 		Transform {
 			children Inline	{ url "fan/fan_4.wrl" }
 		}
-#		Transform {
-#			children Inline	{ url "flash/flash_1.wrl" }
-#		}
 	]
 }
 

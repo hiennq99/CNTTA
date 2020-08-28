@@ -51,11 +51,11 @@ Transform {
 Inline { url "cua_ra_vao.wrl" }
 Transform {
 	translation	5.6 0 0
-	children Inline { url "cua_ra_vao.wrl" }
+	children Inline { url "cua_ra_vao_2.wrl" }
 }
 Transform {
 	translation	-5.6 0 0
-	children Inline { url "cua_ra_vao.wrl" }
+	children Inline { url "cua_ra_vao_3.wrl" }
 }
 #Cửa sổ
 Inline { url "cua_so.wrl" }
@@ -70,4 +70,13 @@ Transform {
 Transform {
 	translation	-11.2 0 0
 	children Inline { url "cua_so.wrl" }
+}
+Transform {
+	children Inline	{ url "person/person_2.wrl" }
+}
+Transform {
+	children Inline	{ url "person/person_3.wrl" }
+}
+Transform {
+	children Inline	{ url "person/person_4.wrl" }
 }

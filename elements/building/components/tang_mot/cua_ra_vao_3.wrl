@@ -1,0 +1,192 @@
+#VRML V2.0 utf8
+
+												 #VRML V2.0 utf8
+
+#VRML V2.0 utf8
+#Cửa ra vào
+EXTERNPROTO	Wall-1 [field SFVec3f size] "../../_proto.wrl#Wall-1"
+EXTERNPROTO	Wall-2 [field SFVec3f size] "../../_proto.wrl#Wall-2"
+EXTERNPROTO	Wall-3 [field SFVec3f size] "../../_proto.wrl#Wall-3"
+EXTERNPROTO	Wall [field SFColor color, field SFVec3f size, field SFFloat trans] "../../_proto.wrl#Wall"
+
+Transform {
+	translation	0 2.6 0
+	children Wall { size 2.4 0.2 0.2 trans 0.5 }
+}
+#Thanh dọc trong suốt
+DEF ThanhDoc Transform {
+	translation	-1.1 1.35 0
+	children Wall { size 0.2 2.7 0.2 trans 0.5 }
+}
+Transform {
+	translation	2.2 0 0
+	children USE ThanhDoc
+}
+#Thanh trang trí ngang
+DEF ThanhTTNgang Transform {
+	translation	0 2.7 0.15
+	children Wall { size 2.4 0.05 0.05 color 1 1 1 }
+}
+Transform {
+	translation	0 -0.2 0
+	children USE ThanhTTNgang
+}
+#Thanh trang trí dọc
+DEF	ThanhTTDoc Transform {
+	translation	-1.2 1.35 0.15
+	children Wall { size 0.05 2.7 0.05 color 1 1 1}
+}
+Transform {
+	translation	0.2 0 0
+	children USE ThanhTTDoc
+}
+Transform {
+	translation	2.4 0 0
+	children USE ThanhTTDoc
+}
+Transform {
+	translation	2.2 0 0
+	children USE ThanhTTDoc
+}
+#Thanh nhỏ nằm dọc
+Transform {
+	translation	0 2.6 0.15
+	children Wall { size 0.05 0.2 0.05 color 1 1 1 }
+}
+#Thanh nhỏ nằm ngang
+DEF ThanhTTNgangNho Transform {
+	translation	-1.1 0.025 0.15
+	children Wall { size 0.2 0.05 0.05 color 1 1 1}
+}
+Transform {
+	translation	0 1 0
+	children USE ThanhTTNgangNho
+}
+Transform {
+	translation	2.2 0 0
+	children USE ThanhTTNgangNho
+}
+Transform {
+	translation	2.2 1 0
+	children USE ThanhTTNgangNho
+}
+# Cánh cửa
+DEF	CanhCuaTrai Transform {
+	rotation 0 0 0 0
+	translation	-1 0 0.15
+	children [
+		# Cánh cửa
+		Transform {
+			translation	0.5 1.25 0
+			children Wall { size 1 2.5 0.05 trans 0.5 }
+		}
+		# Tay nắm cửa
+		DEF CucNamCuaTrai Transform {
+			translation	0.8 1.4 0
+			rotation 1 0 0 1.5719
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 1 1 1
+						}
+					}
+					geometry Cylinder {
+						height 0.05
+						radius 0.05
+					}
+				}
+			]
+		}
+		Transform {
+			translation	0 -0.4 0
+			children USE CucNamCuaTrai
+		}
+		# Thanh kéo cửa
+		Transform {
+			translation	0.8 1.2 0.05
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 1 1 1
+						}
+					}
+					geometry Cylinder {
+						height 0.8
+						radius 0.05
+					}
+				}
+			]
+		}
+		DEF	actionKeoCuaTrai CylinderSensor	{
+			enabled	TRUE
+			offset 0
+			autoOffset TRUE
+			maxAngle 0
+			minAngle -2
+		}
+	]
+}
+DEF	CanhCuaPhai Transform {
+	rotation 0 0 0 0
+	translation	1 0 0.15
+	children [
+		# Cánh cửa
+		Transform {
+			translation	-0.5 1.25 0
+			children Wall { size 1 2.5 0.05 trans 0.5 }
+		}
+		# Tay nắm cửa
+		DEF CucNamCuaPhai Transform {
+			translation	-0.8 1.4 0
+			rotation 1 0 0 1.5719
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 1 1 1
+						}
+					}
+					geometry Cylinder {
+						height 0.05
+						radius 0.05
+					}
+				}
+			]
+		}
+		Transform {
+			translation	0 -0.4 0
+			children USE CucNamCuaPhai
+		}
+		# Thanh kéo cửa
+		Transform {
+			translation	-0.8 1.2 0.05
+			children [
+				Shape {
+					appearance Appearance {
+						material Material {
+							diffuseColor 1 1 1
+						}
+					}
+					geometry Cylinder {
+						height 0.8
+						radius 0.05
+					}
+				}
+			]
+		}
+		DEF	actionKeoCuaPhai CylinderSensor	{
+			enabled	TRUE
+			offset 0
+			autoOffset TRUE
+			maxAngle 2
+			minAngle 0
+		}
+	]
+}
+
+ROUTE actionKeoCuaTrai.rotation_changed	TO CanhCuaTrai.rotation
+ROUTE actionKeoCuaPhai.rotation_changed	TO CanhCuaPhai.rotation
+
+
