@@ -4,6 +4,8 @@
 Viewpoint {
 	position 0 -5 20
 }
+DEF	nguoi Transform	{
+	children [
 
 #Đầu
 DEF	Head Transform {
@@ -204,10 +206,10 @@ DEF	HandLeft Transform {
 			]
 		}
 		#Cánh tay
-		DEF khopPhai Transform {
+		Transform {
 			translation	0 -1.4 0
 			scale 0.55 1 0.55
-			children [Shape {
+			children Shape {
 				appearance Appearance {
 					material USE MauAo
 				}
@@ -261,22 +263,20 @@ DEF	HandLeft Transform {
 					beginCap TRUE
 					creaseAngle	1
 				}
-			},
-            #ban tay
-            Transform {
-			translation	0 -2.4 0
+			}
+		}
+		#Bàn tay
+		Transform {
+			translation	0 -3.4 0
 			children Shape {
 				appearance Appearance {
 					material USE MauAo
 				}
 				geometry Sphere	{
-					radius 0.5
+					radius 0.3
 				}
 			}
-		}]
 		}
-		#Bàn tay
-		
 	]
 }
 #Tay phải
@@ -359,10 +359,10 @@ DEF	HandRight Transform {
 			]
 		}
 		#Cánh tay
-		DEF khopTrai Transform {
+		Transform {
 			translation	0 -1.4 0
 			scale 0.55 1 0.55
-			children [Shape {
+			children Shape {
 				appearance Appearance {
 					material USE MauAo
 				}
@@ -416,23 +416,20 @@ DEF	HandRight Transform {
 					beginCap TRUE
 					creaseAngle	1
 				}
-			},
-            #ban tay
-            Transform {
-			translation	0 -2.4 0
+			}
+		}
+		#Bàn tay
+		Transform {
+			translation	0 -3.4 0
 			children Shape {
 				appearance Appearance {
 					material USE MauAo
 				}
 				geometry Sphere	{
-					radius 0.5
+					radius 0.3
 				}
 			}
 		}
-            ]
-		}
-		#Bàn tay
-		
 	]
 }
 #Chân trái
@@ -512,6 +509,8 @@ DEF	FootLeft Transform {
 			]
 		}
 		#Cẳng chân
+		DEF	bapchantrai Transform {
+			children [
 		Transform {
 			scale 0.9 1.4 0.9
 			translation	0 -3.2 0
@@ -566,6 +565,8 @@ DEF	FootLeft Transform {
 		}
 	]
 }
+	]
+}
 #Chân phải
 DEF	FootRight Transform {
 	scale 0.65 1 0.65
@@ -588,7 +589,7 @@ DEF	FootRight Transform {
 			]
 		}
 		#Bắp chân
-		Transform {
+	 Transform {
 			translation	0 -0.5 0
 			children Shape {
 				appearance Appearance {
@@ -643,7 +644,9 @@ DEF	FootRight Transform {
 			]
 		}
 		#Cẳng chân
-		Transform {
+		DEF	bapchanphai Transform {
+			children [
+	    Transform {
 			scale 0.9 1.4 0.9
 			translation	0 -3.2 0
 			children Shape {
@@ -697,18 +700,55 @@ DEF	FootRight Transform {
 		}
 	]
 }
-#vungtay
-DEF	time TimeSensor	{
-	cycleInterval 5
-	loop TRUE
+	]
 }
-
-DEF	quay OrientationInterpolator {
-	key	[0, 0.25, 0.5, 0.75, 1.0]
-	keyValue [1 0 0 0, 1 0 0 -0.5, 1 0 0 0, 1 0 0 0.5, 1 0 0 0] 
+]
 }
-
-ROUTE time.fraction_changed	TO quay.set_fraction
-ROUTE quay.value_changed TO	khopTrai.rotation
-
+DEF	ma Script {
+	eventIn	SFBool turnOn
+	eventOut SFBool	On
+	eventOut SFBool	Off
+	field SFBool turn FALSE
+	url	"javascript:
+	function turnOn(val){
+		if(val){
+			turn = !turn;
+			if(turn){
+				On= TRUE;
+				Off= FALSE;
+			}
+			else
+			{
+				On= FALSE;
+				Off= TRUE;
+			}
+		}
+	}
+	"
+}
+DEF	touch1 TouchSensor {
+	enabled	TRUE
+}
+DEF	time1 TimeSensor {
+	cycleInterval 1
+	enabled	FALSE
+}
+DEF	orien1 OrientationInterpolator {
+	key	[0 1]
+	keyValue [1 0 0 0, 1 0 0 -1.04]
+}
+DEF	pos1 PositionInterpolator {
+	key	[0 1]
+	keyValue [0 0 0, 0 -2 -2]
+}
+ROUTE touch1.isActive TO ma.turnOn
+ROUTE ma.On	TO time1.enabled
+ROUTE ma.Off TO	time1.enabled
+ROUTE touch1.touchTime TO time1.startTime
+ROUTE time1.fraction_changed TO	orien1.set_fraction
+ROUTE orien1.value_changed TO FootLeft.rotation
+ROUTE orien1.value_changed TO FootRight.rotation
+ROUTE time1.fraction_changed TO	pos1.set_fraction
+ROUTE pos1.value_changed TO	nguoi.translation
+	
 
